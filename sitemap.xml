@@ -2,56 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://weifangchou.github.io/resume/index.html</loc>
+    <loc>http://fangs.dev/resume/index.html</loc>
     
     <lastmod>2021-05-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://weifangchou.github.io/archives/index.html</loc>
+    <loc>http://fangs.dev/archives/index.html</loc>
     
     <lastmod>2021-05-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://weifangchou.github.io/2021/05/07/test/</loc>
+    <loc>http://fangs.dev/2021/05/07/test/</loc>
     
     <lastmod>2021-05-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://weifangchou.github.io/about/index.html</loc>
+    <loc>http://fangs.dev/about/index.html</loc>
     
     <lastmod>2021-05-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://weifangchou.github.io/link/index.html</loc>
+    <loc>http://fangs.dev/link/index.html</loc>
     
     <lastmod>2021-05-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://weifangchou.github.io/categories/index.html</loc>
+    <loc>http://fangs.dev/categories/index.html</loc>
     
     <lastmod>2021-05-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://weifangchou.github.io/tags/index.html</loc>
+    <loc>http://fangs.dev/tags/index.html</loc>
     
     <lastmod>2021-05-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://weifangchou.github.io/2021/05/06/hello-world/</loc>
+    <loc>http://fangs.dev/2021/05/06/hello-world/</loc>
     
     <lastmod>2021-05-06</lastmod>
     
@@ -59,7 +59,7 @@
   
 
   <url>
-    <loc>http://weifangchou.github.io/</loc>
+    <loc>http://fangs.dev/</loc>
     <lastmod>2021-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -67,7 +67,7 @@
 
   
   <url>
-    <loc>http://weifangchou.github.io/tags/test/</loc>
+    <loc>http://fangs.dev/tags/test/</loc>
     <lastmod>2021-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
