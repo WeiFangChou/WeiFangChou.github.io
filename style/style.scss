@@ -1,0 +1,137 @@
+body {
+    margin:0;
+    background-image: url("./background.jpg");
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.title {    
+    font-size: 80;
+    font-family: 'Roboto', sans-serif;
+    border-style: 10;
+    border-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.subtitle{
+    font-size: 30;
+    font-family: 'Roboto', sans-serif;
+    border-style: 10;
+    border-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.top{
+ width: 100%;
+    text-align: right;
+}
+.menu{
+
+}
+
+
+.header{
+    font-size: 50;
+    text-align: center;
+    vertical-align: middle; 
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+
+div.icon{
+    text-align: center;
+    margin: 0;
+
+}
+ul{
+    display: inline;
+    padding: 0;
+
+}
+li{
+
+    list-style: none;
+    display: inline;
+
+}
+
+
+
+
+footer{
+    bottom: 0;
+    cursor: default;
+    height: 6em;
+    left: 0;
+    line-height: 8em;
+    position: absolute;
+    text-align: center;
+    width: 100%
+
+}
+.copyright{
+    font-family: 'Roboto', sans-serif;
+}
+
+a:link{
+    color: black;
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+    text-decoration: none;
+
+}
+a:hover {
+    color: black;
+    text-decoration: none;
+    opacity: 0.5;
+}
+a:active {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+@media only screen and (min-width: 375px) 
+and (max-width: 812px){ 
+    .title{
+        font-size: 50;
+    }
+    .subtitle{
+        font-size: 30;
+    }
+}
+
+@media only screen and (min-width: 375px) 
+and (max-width: 812px) and (orientation: portrait) { 
+    .title{
+        font-size: 50;
+    }
+    .subtitle{
+        font-size: 30;
+    }
+}
+
+@media only screen and (min-width: 375px) 
+and (max-width: 812px) and (orientation: landscape) { 
+    .title{
+        font-size: 50;
+    }
+    .subtitle{
+        font-size: 30;
+    }
+}
