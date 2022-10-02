@@ -6745,10 +6745,12 @@ textarea.form-control-lg {
   display: inline-flex !important;
 }
 
-.d-none {
+.d-done {
   display: none !important;
 }
-
+.d-error {
+  display: none !important;
+}
 .shadow {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
@@ -8634,10 +8636,13 @@ textarea.form-control-lg {
     float: right !important;
   }
 
-  .float-md-none {
+  .float-md-done {
     float: none !important;
   }
 
+  .float-md-error {
+    float: none !important;
+  }
   .d-md-inline {
     display: inline !important;
   }
@@ -8674,7 +8679,10 @@ textarea.form-control-lg {
     display: inline-flex !important;
   }
 
-  .d-md-none {
+  .d-md-done {
+    display: none !important;
+  }
+  .d-md-error {
     display: none !important;
   }
 
