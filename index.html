@@ -14,6 +14,37 @@
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/jquery-3.6.1.js"></script>
+    <script>
+        var form = document.getElementById("my-form");
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Thanks for your submission!";
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
@@ -21,20 +52,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <script>
-        $(document).ready(function(){
-            // click on button submit
-            $("#submitButton").on('click', function(){
-                console.debug("Click")
-                var name = document.getElementById("name").value;
-                var email = document.getElementById("email").value;
-                var phone = document.getElementById("phone").value;
-                var message = document.getElementById("message").value;
-
-
-                var data = { "name": name, "email": email,"phone": phone, "content":message }
-                $.post( "https://api.fangs.dev/contentForm",data,success(),'json' );
-            });
-        });
+       
     </script>
 </head>
 
@@ -376,7 +394,7 @@
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
-                    <form id="contentForm" action="http://127.0.0.1:8080/contentForm" method="post" >
+                    <form id="my-form" action="https://formspree.io/f/mgedgqra" method="POST" >
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control bg-primary" id="name" type="text"
