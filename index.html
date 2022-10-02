@@ -33,21 +33,25 @@
             if (response.ok) {
                 successStatus.style.display = 'inline';
                 successStatus.innerHTML = "Thanks for your submission!";
+                console.info("Thanks for your submission!");
               form.reset()
             } else {
               response.json().then(data => {
                 if (Object.hasOwn(data, 'errors')) {
                     errorStatus.style.display = 'inline';
                     errorStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                    console.info("Error sending message!");
                 } else {
                     errorStatus.style.display = 'inline';
                     errorStatus.innerHTML = "Oops! There was a problem submitting your form"
+                    console.info("Error sending message!");
                 }
               })
             }
           }).catch(error => {
             errorStatus.style.display = 'inline';
             errorStatus.innerHTML = "Oops! There was a problem submitting your form"
+            console.info("Error sending message!");
           });
         }
         
