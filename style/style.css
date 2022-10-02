@@ -13,18 +13,18 @@ body {
 
 .title {
   font-size: 80;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-style: 10;
   border-color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .subtitle {
   font-size: 30;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-style: 10;
   border-color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .top {
@@ -40,8 +40,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 div.icon {
@@ -71,7 +70,7 @@ footer {
 }
 
 .copyright {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a:link {
@@ -103,7 +102,6 @@ a:active {
     font-size: 30;
   }
 }
-
 @media only screen and (min-width: 375px) and (max-width: 812px) and (orientation: portrait) {
   .title {
     font-size: 50;
@@ -112,7 +110,6 @@ a:active {
     font-size: 30;
   }
 }
-
 @media only screen and (min-width: 375px) and (max-width: 812px) and (orientation: landscape) {
   .title {
     font-size: 50;
@@ -120,5 +117,4 @@ a:active {
   .subtitle {
     font-size: 30;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
