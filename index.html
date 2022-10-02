@@ -19,7 +19,9 @@
         async function handleSubmit(event) {
           event.preventDefault();
           var successStatus = document.getElementById("submitSuccessMessage");
+          successStatus.style.display = 'none';
           var errorStatus = document.getElementById("submitErrorMessage");
+          errorStatus.style.display = 'none';
           var data = new FormData(event.target);
           fetch(event.target.action, {
             method: form.method,
@@ -29,18 +31,22 @@
             }
           }).then(response => {
             if (response.ok) {
+                successStatus.style.display = 'inline';
                 successStatus.innerHTML = "Thanks for your submission!";
               form.reset()
             } else {
               response.json().then(data => {
                 if (Object.hasOwn(data, 'errors')) {
+                    errorStatus.style.display = 'inline';
                     errorStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ")
                 } else {
+                    errorStatus.style.display = 'inline';
                     errorStatus.innerHTML = "Oops! There was a problem submitting your form"
                 }
               })
             }
           }).catch(error => {
+            errorStatus.style.display = 'inline';
             errorStatus.innerHTML = "Oops! There was a problem submitting your form"
           });
         }
@@ -52,9 +58,6 @@
         type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <script>
-       
-    </script>
 </head>
 
 <body id="page-top">
@@ -433,7 +436,7 @@
                         <!---->
                         <!-- This is what your users will see when the form-->
                         <!-- has successfully submitted-->
-                        <div class="d-done" id="submitSuccessMessage">
+                        <div class="d-done" id="submitSuccessMessage" >
                             <div class="text-center mb-3">
                                 <div class="fw-bolder">Form submission successful!</div>
                             </div>
