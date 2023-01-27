@@ -39,14 +39,7 @@
                         $('#phone').val('')
                         $('#content').val('')
                         //最後跳轉到感謝的頁面
-                        $('#google-form *').fadeOut(2000);
-                        $('#google-form').prepend('Your submission has been processed...');
-                        var successStatus = document.getElementById("submitSuccessMessage");
-                        successStatus.style.display = 'none';
-                        successStatus.style.display = 'inline';
-                        successStatus.innerHTML = "Thanks for your submission!";
-                        console.info("Thanks for your submission!");
-                        form.reset()
+                        window.location.replace("thanks.html");
                     }
                 });
             }
