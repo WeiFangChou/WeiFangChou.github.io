@@ -14,13 +14,48 @@
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="./js/jquery-3.6.1.js"></script>
     <script type="text/javascript">var submitted = false;</script>
-    <script type="text/javascript">
-        $('#gform').on('submit', function (e) {
-            $('#gform *').fadeOut(2000);
-            $('#gform').prepend('Your submission has been processed...');
+    <script>
+        $('#google-form').submit(function (e) {
+            //在這裡我們要先擋掉form默認事件
+            e.preventDefault();
+            <!-- entry.1461893001=Name&entry.1040186082=Email&entry.2130829799=Phone&entry.528340459=Conter -->
+            var form = document.getElementById("gform");
+            if ($('#name').val() && $('#score').val()) {//需要先確認必填欄位是否填寫
+                $.ajax({
+                    // url為Google Form按下submit的aciotn
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLScYDIcyDrehEfnvzzUbffU-BzTEMKKV_W_-gsWTxbzCjBVP0Q/formResponse",
+
+                    crossDomain: true,//解決跨網域CORS的問題
+                    data: {// entry.xxxxx 這些需要填寫您表單裡面的值，與其相互對應
+                        "entry.1461893001": $('#name').val(),
+                        "entry.1040186082": $('#email').val(),
+                        "entry.2130829799": $('#phone').val(),
+                        "entry.528340459": $('#content').val()
+                    },
+                    type: "POST", //因為是要進行insert的動作，故事用POST
+                    dataType: "JSONP",
+                    complete: function () {
+                        //完成後把這些欄位清空
+                        $('#name').val('')
+                        $('#email').val('')
+                        $('#phone').val('')
+                        $('#content').val('')
+                            //最後跳轉到感謝的頁面
+                            < !--window.location.replace("thank.html"); -->
+                                $('#gform *').fadeOut(2000);
+                        $('#gform').prepend('Your submission has been processed...');
+                        var successStatus = document.getElementById("submitSuccessMessage");
+                        successStatus.style.display = 'none';
+                        successStatus.style.display = 'inline';
+                        successStatus.innerHTML = "Thanks for your submission!";
+                        console.info("Thanks for your submission!");
+                        form.reset()
+                    }
+                });
+            }
         });
     </script>
-    <script>
+    <!-- <script>
         var form = document.getElementById("contentForm");
         async function handleSubmit(event) {
             event.preventDefault();
@@ -61,7 +96,7 @@
             });
         }
 
-    </script>
+    </script> -->
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
@@ -411,6 +446,15 @@
                     <!-- Submit success message-->
                     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
                         onload="if(submitted) {}"></iframe>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-done" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                        </div>
+                    </div>
                     <form id="gform" name="gform" enctype="text/plain"
                         action="https://docs.google.com/forms/d/1FAIpQLScYDIcyDrehEfnvzzUbffU-BzTEMKKV_W_-gsWTxbzCjBVP0Q/formResponse?"
                         target="hidden_iframe" onsubmit="submitted=true;">
@@ -418,31 +462,30 @@
 
                         <!-- entry.1461893001=Name&entry.1040186082=Email&entry.2130829799=Phone&entry.528340459=Conter -->
                         <div class="form-floating mb-3">
-                            <input class="form-control bg-primary" type="text" name="entry.1461893001"
-                                id="entry.1461893001" placeholder="Enter your name..." data-sb-validations="required" />
+                            <input class="form-control bg-primary" type="text" name="name" id="name"
+                                placeholder="Enter your name..." data-sb-validations="required" />
                             <label for="name">Full name</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control bg-primary" type="email" name="entry.1040186082"
-                                id="entry.1040186082" placeholder="name@example.com"
-                                data-sb-validations="required,email" />
+                            <input class="form-control bg-primary" type="email" name="email" id="email"
+                                placeholder="name@example.com" data-sb-validations="required,email" />
                             <label for="email">Email address</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control bg-primary" type="telephone" name="entry.2130829799"
-                                id="entry.2130829799" placeholder="(02) 1234-5678" data-sb-validations="required" />
+                            <input class="form-control bg-primary" type="telephone" name="phone" id="phone"
+                                placeholder="(02) 1234-5678" data-sb-validations="required" />
                             <label for="phone">Phone number</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
                             </div>
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control bg-primary" name="entry.528340459" id="entry.528340459"
+                            <textarea class="form-control bg-primary" name="content" id="content"
                                 placeholder="Enter your message here..." style="height: 10rem"
                                 data-sb-validations="required"></textarea>
                             <label for="message">Message</label>
@@ -452,7 +495,8 @@
 
 
                         <!-- Submit Button-->
-                        <button class="btn btn-primary btn-xl" id="submitButton" name="submitButton" value="Submit" type="submit">Send
+                        <button class="btn btn-primary btn-xl" id="submitButton" name="submitButton" value="Submit"
+                            type="submit">Send
                             !</button>
                     </form>
                 </div>
