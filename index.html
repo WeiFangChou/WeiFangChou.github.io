@@ -17,32 +17,33 @@
     <script>
         $('#google-form').submit(function (e) {
             //在這裡我們要先擋掉form默認事件
+            console.warn("Google Form Debug");
             e.preventDefault();
             var form = document.getElementById("google-form");
             const endpoint = 'https://docs.google.com/forms/d/e/1FAIpQLScYDIcyDrehEfnvzzUbffU-BzTEMKKV_W_-gsWTxbzCjBVP0Q/formResponse';
             if ($('#name').val() && $('#email').val()) {//需要先確認必填欄位是否填寫
                 $.ajax({
-                    type:"POST",
-                    url:endpoint,
-                    data:{
+                    // url為Google Form按下submit的aciotn
+                    url: endpoint,
+                    crossDomain: true,//解決跨網域CORS的問題
+                    data: {// entry.xxxxx 這些需要填寫您表單裡面的值，與其相互對應
                         "entry.1461893001": $('#name').val(),
                         "entry.1040186082": $('#email').val(),
                         "entry.2130829799": $('#phone').val(),
                         "entry.528340459": $('#content').val()
                     },
-                    success: function (response) {
-                         //完成後把這些欄位清空
-                         $('#name').val('')
-                         $('#email').val('')
-                         $('#phone').val('')
-                         $('#content').val('')
-                         //最後跳轉到感謝的頁面
-                         window.location.replace("thanks.html");
-                      },
-                      error: function (thrownError) {
-                        console.log(thrownError);
-                      }
-                })
+                    type: "POST", //因為是要進行insert的動作，故事用POST
+                    dataType: "JSONP",
+                    complete: function () {
+                      //完成後把這些欄位清空
+                      $('#name').val('')
+                      $('#email').val('')
+                      $('#phone').val('')
+                      $('#content').val('')
+                      //最後跳轉到感謝的頁面
+                      window.location.replace("thank.html");
+                    }
+                  });
             }
         });
     </script>
