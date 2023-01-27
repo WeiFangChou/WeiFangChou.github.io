@@ -18,9 +18,8 @@
         $('#google-form').submit(function (e) {
             //在這裡我們要先擋掉form默認事件
             e.preventDefault();
-            <!-- entry.1461893001=Name&entry.1040186082=Email&entry.2130829799=Phone&entry.528340459=Conter -->
             var form = document.getElementById("gform");
-            if ($('#name').val() && $('#score').val()) {//需要先確認必填欄位是否填寫
+            if ($('#name').val() && $('#email').val()) {//需要先確認必填欄位是否填寫
                 $.ajax({
                     // url為Google Form按下submit的aciotn
                     url: "https://docs.google.com/forms/d/e/1FAIpQLScYDIcyDrehEfnvzzUbffU-BzTEMKKV_W_-gsWTxbzCjBVP0Q/formResponse",
@@ -41,7 +40,6 @@
                         $('#phone').val('')
                         $('#content').val('')
                             //最後跳轉到感謝的頁面
-                            < !--window.location.replace("thank.html"); -->
                                 $('#gform *').fadeOut(2000);
                         $('#gform').prepend('Your submission has been processed...');
                         var successStatus = document.getElementById("submitSuccessMessage");
@@ -455,7 +453,7 @@
                             <div class="fw-bolder">Form submission successful!</div>
                         </div>
                     </div>
-                    <form id="gform" name="gform" enctype="text/plain"
+                    <form id="google-form" name="google-form" enctype="text/plain"
                         action="https://docs.google.com/forms/d/1FAIpQLScYDIcyDrehEfnvzzUbffU-BzTEMKKV_W_-gsWTxbzCjBVP0Q/formResponse?"
                         target="hidden_iframe" onsubmit="submitted=true;">
                         <!-- Name input-->
