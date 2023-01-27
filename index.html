@@ -18,12 +18,11 @@
         $('#google-form').submit(function (e) {
             //在這裡我們要先擋掉form默認事件
             e.preventDefault();
-            var form = document.getElementById("gform");
+            var form = document.getElementById("google-form");
             if ($('#name').val() && $('#email').val()) {//需要先確認必填欄位是否填寫
                 $.ajax({
                     // url為Google Form按下submit的aciotn
                     url: "https://docs.google.com/forms/d/e/1FAIpQLScYDIcyDrehEfnvzzUbffU-BzTEMKKV_W_-gsWTxbzCjBVP0Q/formResponse",
-
                     crossDomain: true,//解決跨網域CORS的問題
                     data: {// entry.xxxxx 這些需要填寫您表單裡面的值，與其相互對應
                         "entry.1461893001": $('#name').val(),
@@ -40,8 +39,8 @@
                         $('#phone').val('')
                         $('#content').val('')
                         //最後跳轉到感謝的頁面
-                        $('#gform *').fadeOut(2000);
-                        $('#gform').prepend('Your submission has been processed...');
+                        $('#google-form *').fadeOut(2000);
+                        $('#google-form').prepend('Your submission has been processed...');
                         var successStatus = document.getElementById("submitSuccessMessage");
                         successStatus.style.display = 'none';
                         successStatus.style.display = 'inline';
@@ -441,9 +440,6 @@
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
-                    <!-- Submit success message-->
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-                        onload="if(submitted) {}"></iframe>
                     <!-- Submit success message-->
                     <!---->
                     <!-- This is what your users will see when the form-->
