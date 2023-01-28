@@ -17,10 +17,10 @@
     <script>
         $('#google-form').submit(function (e) {
             //在這裡我們要先擋掉form默認事件
-            console.warn("Google Form Debug");
+            document
             e.preventDefault();
             var form = document.getElementById("google-form");
-            const endpoint = 'https://docs.google.com/forms/d/e/1FAIpQLScYDIcyDrehEfnvzzUbffU-BzTEMKKV_W_-gsWTxbzCjBVP0Q/formResponse';
+            const endpoint = "https://docs.google.com/forms/d/e/1FAIpQLScYDIcyDrehEfnvzzUbffU-BzTEMKKV_W_-gsWTxbzCjBVP0Q/formResponse";
             if ($('#name').val() && $('#email').val()) {//需要先確認必填欄位是否填寫
                 $.ajax({
                     // url為Google Form按下submit的aciotn
@@ -41,54 +41,12 @@
                       $('#phone').val('')
                       $('#content').val('')
                       //最後跳轉到感謝的頁面
-                      window.location.replace("thank.html");
+                      window.location.replace("thanks.html");
                     }
                   });
             }
         });
     </script>
-    <!-- <script>
-        var form = document.getElementById("contentForm");
-        async function handleSubmit(event) {
-            event.preventDefault();
-            var successStatus = document.getElementById("submitSuccessMessage");
-            successStatus.style.display = 'none';
-            var errorStatus = document.getElementById("submitErrorMessage");
-            errorStatus.style.display = 'none';
-            var data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    successStatus.style.display = 'inline';
-                    successStatus.innerHTML = "Thanks for your submission!";
-                    console.info("Thanks for your submission!");
-                    form.reset()
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            errorStatus.style.display = 'inline';
-                            errorStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                            console.info("Error sending message!");
-                        } else {
-                            errorStatus.style.display = 'inline';
-                            errorStatus.innerHTML = "Oops! There was a problem submitting your form"
-                            console.info("Error sending message!");
-                        }
-                    })
-                }
-            }).catch(error => {
-                errorStatus.style.display = 'inline';
-                errorStatus.innerHTML = "Oops! There was a problem submitting your form"
-                console.info("Error sending message!");
-            });
-        }
-
-    </script> -->
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
@@ -445,9 +403,8 @@
                         </div>
                     </div>
                     <form id="google-form" name="google-form">
-                        <!-- Name input-->
-
                         <!-- entry.1461893001=Name&entry.1040186082=Email&entry.2130829799=Phone&entry.528340459=Conter -->
+                        <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control bg-primary" type="text" name="name" id="name"
                                 placeholder="Enter your name..." data-sb-validations="required" />
