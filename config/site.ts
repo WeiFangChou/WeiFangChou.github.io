@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "WEIFANG PORTFILIO",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "WEIFANG PORTFOLIO",
+  description: "WeiFang Chou Portfolio",
   navItems: [
     {
       label: "About",
@@ -16,65 +16,48 @@ export const siteConfig = {
       label: "Projects",
       href: "#projects",
     },
-  ],
-  navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      label: "Contact",
+      href: "#contact",
     },
   ],
+  navMenuItems: [],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/WeiFangChou",
   },
+  resume: {
+    link: "/resume.pdf",
+  },
+};
+
+export const myProfile = {
+  name: "周暐芳 WeiFang",
+  descption:
+    "我熱愛挑戰自己，並不斷追求個人成長和學習。我的經驗涵蓋了設計與前端，並且我喜歡在這些領域中不斷創新和探索。我擁有良好的溝通和團隊合作能力，並能夠在壓力下保持高效率。",
+  avatar: "/avator.jpg",
 };
 
 export const myExperience = {
   name: "經歷 Experience",
   experiences: [
     {
-      startDate: "2023-03",
-      endDate: "2024-07",
-      title: "App 工程師",
-      company: "亞路科技",
+      startDate: "2023.03",
+      endDate: "2024.07",
+      title: "App 開發工程師",
+      company: "亞路科技股份有限公司",
     },
-    // {
-    //   startDate: "2022-10",
-    //   endDate: "2023-02",
-    //   title: "軟體工程師",
-    //   company: "藍新科技",
-    // },
+    {
+      startDate: "2021.11",
+      endDate: "2023.02",
+      title: "軟體工程師",
+      company: "緯創軟體股份有限公司",
+    },
+    {
+      startDate: "2016.09",
+      endDate: "2020.06",
+      title: "資訊網路工程系",
+      company: "龍華科技大學",
+    },
   ],
 };
 
@@ -84,29 +67,38 @@ export const mySkills = {
     "不斷精進設計技巧與學習前端語法，熟悉RWD網頁切版，具大小專案經驗，具快速統整能力，能夠在大量資訊中找出商家特點，針對其TA及企業風格設計，致力於打造更優質、更具吸引力的網站。",
   skills: [
     {
-      typeName: "Frontend",
+      typeName: "App",
       skills: [
         {
-          name: "Next.js",
+          name: "Swift",
           level: 3,
         },
         {
-          name: "React.js",
-          level: 3,
-        },
-        {
-          name: "TypeScript",
-          level: 3,
-        },
-        {
-          name: "Tailwindcss",
+          name: "Flutter",
           level: 3,
         },
       ],
     },
     {
-      typeName: "Backend",
+      typeName: "Front-end",
       skills: [
+        {
+          name: "TailwindCSS",
+          level: 3,
+        },
+      ],
+    },
+    {
+      typeName: "Back-end",
+      skills: [
+        {
+          name: "TypeScript",
+          level: 3,
+        },
+        {
+          name: "Next.js",
+          level: 10,
+        },
         {
           name: "Node.js",
           level: 3,
@@ -117,15 +109,16 @@ export const mySkills = {
         },
       ],
     },
+
     {
-      typeName: "App",
+      typeName: "Framework",
       skills: [
         {
-          name: "Android",
+          name: "Cocoapods",
           level: 3,
         },
         {
-          name: "iOS",
+          name: "SwiftPackageManager",
           level: 3,
         },
       ],
@@ -138,11 +131,43 @@ export const myProjects = {
     "擁有超過160間形象網頁設計的豐富經驗，涵蓋了餐飲、零售、美業等多個產業類別，設計風格多樣，能夠根據客戶需求和行業特性，量身打造符合品牌形象的網頁設計。",
   projects: [
     {
+      name: "故宮精品網路商城",
+      description:
+        "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
+      image: ["/assets/img/npmshops.png"],
+      responsible: ["App開發", "Apple Pay"],
+      link: "https://nextui.org",
+    },
+    {
       name: "NextUI",
       description:
         "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
-      image: "/nextui.png",
-      Responsible: ["designer", "developer"],
+      image: ["/assets/img/npmshops.png"],
+      responsible: ["designer", "developer"],
+      link: "https://nextui.org",
+    },
+    {
+      name: "NextUI",
+      description:
+        "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
+      image: ["/assets/img/npmshops.png"],
+      responsible: ["designer", "developer"],
+      link: "https://nextui.org",
+    },
+    {
+      name: "NextUI",
+      description:
+        "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
+      image: ["/assets/img/npmshops.png"],
+      responsible: ["designer", "developer"],
+      link: "https://nextui.org",
+    },
+    {
+      name: "NextUI",
+      description:
+        "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
+      image: ["/assets/img/npmshops.png"],
+      responsible: ["designer", "developer"],
       link: "https://nextui.org",
     },
   ],

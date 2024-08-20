@@ -2,6 +2,7 @@ import {
   Fira_Code as FontMono,
   Inter as FontSans,
   Quicksand as Quicksand,
+  Lexend_Deca as LexendDeca,
 } from "next/font/google";
 
 export const fontSans = FontSans({
@@ -17,4 +18,9 @@ export const fontMono = FontMono({
 export const quicksand = Quicksand({
   subsets: ["latin"],
   variable: "--font-quicksand",
+});
+
+export const lexendDeca = LexendDeca({
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
