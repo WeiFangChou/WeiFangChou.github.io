@@ -1,17 +1,22 @@
 import { NextResponse } from "next/server";
+import { FaTrophy } from "react-icons/fa6";
 
 export async function POST(request: Request) {
-  const json = await request.json();
-  const name = json.name;
-  const email = json.email;
-  const phone = json.phone;
-  const message = json.message;
+  try {
+    const json = await request.json();
+    const name = json.name;
+    const email = json.email;
+    const phone = json.phone;
+    const message = json.message;
 
-  await lineNotify(
-    `\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
-  );
+    await lineNotify(
+      `\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
+    );
 
-  return NextResponse.json({ result: true });
+    return NextResponse.json({ result: true });
+  } catch (error) {
+    return NextResponse.json({ result: false });
+  }
 }
 
 export async function lineNotify(message: string) {

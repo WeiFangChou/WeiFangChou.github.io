@@ -1,14 +1,5 @@
 import { Divider } from "@nextui-org/divider";
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Progress,
-  Spacer,
-} from "@nextui-org/react";
-import { Image } from "@nextui-org/react";
+import { Card, CardBody, Progress, Spacer } from "@nextui-org/react";
 import {
   SiFlutter,
   SiNextdotjs,
@@ -22,11 +13,11 @@ import { FaJava, FaNode } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { GoPackage } from "react-icons/go";
 
-import { myExperience, mySkills, myProjects } from "@/config/site";
+import { myExperience, mySkills } from "@/config/site";
 
 export default function About() {
   return (
-    <div className=" " id="about">
+    <div className="mt-10" id="about">
       <div className=" md:flex md:grid-cols-2">
         <div className="md:w-1/2  md:col-span-1 content-start">
           <h2 className="text-5xl font-black m-4 ">

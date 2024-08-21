@@ -22,7 +22,7 @@ export const NaviBar = () => {
 
   return (
     <Navbar
-      isBlurred
+      // isBlurred
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
@@ -50,7 +50,7 @@ export const NaviBar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="mt-[20%]">
         {siteConfig.navItems.map((item, index) => (
           <NavbarMenuItem key={index}>
             <Link

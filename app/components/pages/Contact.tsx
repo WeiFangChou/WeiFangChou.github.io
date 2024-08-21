@@ -1,26 +1,57 @@
-import { Button, Input, Textarea } from "@nextui-org/react";
-import { resolve } from "path";
+import { Button, Input, Spinner, Textarea } from "@nextui-org/react";
 import { useState } from "react";
+import { HiOutlineMail } from "react-icons/hi";
+import { RiMessage3Fill } from "react-icons/ri";
+import { FaPhone } from "react-icons/fa6";
+import { MdPerson } from "react-icons/md";
+import React from "react";
+
 export default function Projects() {
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("chou@gmail.com");
+  const [phone, setPhone] = useState("0987654321");
+  const [name, setName] = useState("Jack");
+  const [message, setMessage] = useState("Message");
   const [sendMessage, setSendMessage] = useState(0);
-  const [errorCounts, setErrorCounts] = useState(3);
+
+  const validateEmail = (email: string) =>
+    email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
+
+  const isInvalidEmail = React.useMemo(() => {
+    if (email === "") return false;
+
+    return validateEmail(email) ? false : true;
+  }, [email]);
 
   async function submit(e: any) {
     e.preventDefault();
+    console.log("Test 0");
+    setSendMessage(2);
+    await new Promise((resolve) => setTimeout(resolve, 500));
     if (name == "" || email == "" || phone == "" || message == "") {
+      console.log("Test 1", email, name, phone, message);
       setSendMessage(4);
       setTimeout(() => {
         setSendMessage(0);
-      }, 2000);
+      }, 1000);
+
+      return;
+    }
+    console.log("Test Email", isInvalidEmail);
+    if (isInvalidEmail) {
+      console.log("Test Email 1");
+      setSendMessage(2);
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      setSendMessage(4);
+      setTimeout(() => {
+        setSendMessage(0);
+      }, 1000);
 
       return;
     }
 
     try {
+      console.log("Test");
+
       let response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -30,7 +61,12 @@ export default function Projects() {
       });
 
       await response.json();
-    } catch (error) {}
+      setSendMessage(9);
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      setSendMessage(0);
+    } catch (error) {
+      setSendMessage(4);
+    }
   }
 
   return (
@@ -42,18 +78,24 @@ export default function Projects() {
             <Input
               isClearable
               isRequired
+              color="default"
               label="Name"
               placeholder="Enter your name"
+              startContent={<MdPerson />}
               type="text"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
             />
           </div>
           <div className="p-3">
             <Input
               isRequired
+              color="default"
               label="Phone"
               placeholder="Enter your phone"
+              startContent={<FaPhone />}
               type="phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -62,10 +104,14 @@ export default function Projects() {
           <div className="p-3">
             <Input
               isRequired
+              color={isInvalidEmail ? "danger" : "success"}
+              isInvalid={isInvalidEmail}
               label="Email"
               placeholder="Enter your email"
+              startContent={<HiOutlineMail />}
               type="email"
               value={email}
+              variant="bordered"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -73,9 +119,19 @@ export default function Projects() {
             <Textarea
               isMultiline
               isRequired
+              classNames={{
+                label: "text-black/50 dark:text-white/90",
+                input: [
+                  "bg-transparent",
+                  "text-black/90 dark:text-white/90",
+                  "placeholder:text-default-700/50 dark:placeholder:text-white/60",
+                ],
+              }}
+              color="default"
               label="Messages"
               minRows={10}
               size="lg"
+              startContent={<RiMessage3Fill />}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
@@ -99,14 +155,10 @@ export function generateSendButton(event: number) {
         </Button>
       );
 
-    case 1:
+    case 2:
       //Sending
-      return (
-        <Button isLoading color="primary" name="submit" size="lg">
-          Loading
-        </Button>
-      );
-    case 3:
+      return <Spinner color="warning" label="Sending..." />;
+    case 9:
       //Success
       return (
         <Button color="primary" name="submit" size="lg" type="submit">

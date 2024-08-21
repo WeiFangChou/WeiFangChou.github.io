@@ -1,4 +1,14 @@
 export type SiteConfig = typeof siteConfig;
+export const myProfessions = [
+  " iOS Developer",
+  3000,
+  "Flutter Developer",
+  3000,
+  "Full-Stack Developer",
+  3000,
+  "Photographer",
+  3000,
+];
 
 export const siteConfig = {
   name: "WEIFANG PORTFOLIO",
