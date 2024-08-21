@@ -48,7 +48,7 @@ export default function Projects() {
     }
 
     try {
-      let response = await fetch("/api/contact", {
+      let response = await fetch("https://api.fangs.dev/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
