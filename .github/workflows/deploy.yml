@@ -72,8 +72,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          npm i -g pnpm
-          npm i
+          npm fund
           ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build with Next.js
