@@ -1,3 +1,5 @@
+"use client";
+
 import { Divider } from "@nextui-org/divider";
 import { Card, CardBody, Progress, Spacer } from "@nextui-org/react";
 import {
@@ -20,14 +22,18 @@ export default function About() {
     <div className="mt-10" id="about">
       <div className=" md:flex md:grid-cols-2">
         <div className="md:w-1/2  md:col-span-1 content-start">
-          <h2 className="text-5xl font-black m-4 ">
+          <h2 className="text-5xl font-black m-4 hover:text-primary">
             Skills &<br /> Experience
           </h2>
-          <h1 className="text-xl mx-4">{mySkills.descption}</h1>
+          <h1 className="text-xl mx-4 hover:text-primary">
+            {mySkills.description}
+          </h1>
         </div>
         <Spacer x={4} y={4} />
         <div className=" md:col-span-1">
-          <div className="text-3xl font-mono m-5">{myExperience.name}</div>
+          <div className="text-3xl font-mono m-5 hover:text-primary">
+            {myExperience.name}
+          </div>
           {myExperience.experiences.map((item, index) => (
             <div
               key={index}

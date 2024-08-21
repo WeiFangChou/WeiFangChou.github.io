@@ -42,8 +42,8 @@ export const siteConfig = {
 
 export const myProfile = {
   name: "周暐芳 WeiFang",
-  descption:
-    "我熱愛挑戰自己，並不斷追求個人成長和學習。我的經驗涵蓋了設計與前端，並且我喜歡在這些領域中不斷創新和探索。我擁有良好的溝通和團隊合作能力，並能夠在壓力下保持高效率。",
+  description:
+    "我熱衷於App開發，並積極拓展後端技能。我享受不斷學習和挑戰自我的過程，致力於在設計與開發領域追求卓越。我將持續學習最新的開發技術，勇於超越自我，目標成為一名全方位的全端工程師。",
   avatar: "/avator.jpg",
 };
 
@@ -73,19 +73,19 @@ export const myExperience = {
 
 export const mySkills = {
   name: "技能 Skills",
-  descption:
-    "不斷精進設計技巧與學習前端語法，熟悉RWD網頁切版，具大小專案經驗，具快速統整能力，能夠在大量資訊中找出商家特點，針對其TA及企業風格設計，致力於打造更優質、更具吸引力的網站。",
+  description:
+    "我對新技術充滿好奇，目前正在深入研究學習Next.JS 和TailWind CSS，以提升前端開發能力。同時也持續學習App開發技能，並積極開發更完整的專案。",
   skills: [
     {
       typeName: "App",
       skills: [
         {
           name: "Swift",
-          level: 3,
+          level: 4.5,
         },
         {
           name: "Flutter",
-          level: 3,
+          level: 4,
         },
       ],
     },
@@ -94,7 +94,7 @@ export const mySkills = {
       skills: [
         {
           name: "TailwindCSS",
-          level: 3,
+          level: 2,
         },
       ],
     },
@@ -103,19 +103,19 @@ export const mySkills = {
       skills: [
         {
           name: "TypeScript",
-          level: 3,
+          level: 3.5,
         },
         {
           name: "Next.js",
-          level: 10,
+          level: 3.5,
         },
         {
           name: "Node.js",
-          level: 3,
+          level: 4,
         },
         {
           name: "Express.js",
-          level: 3,
+          level: 3.5,
         },
       ],
     },
@@ -125,11 +125,11 @@ export const mySkills = {
       skills: [
         {
           name: "Cocoapods",
-          level: 3,
+          level: 5,
         },
         {
           name: "SwiftPackageManager",
-          level: 3,
+          level: 5,
         },
       ],
     },
@@ -138,47 +138,23 @@ export const mySkills = {
 export const myProjects = {
   name: "專案 Projects",
   description:
-    "擁有超過160間形象網頁設計的豐富經驗，涵蓋了餐飲、零售、美業等多個產業類別，設計風格多樣，能夠根據客戶需求和行業特性，量身打造符合品牌形象的網頁設計。",
+    "曾參與故宮精品與亞路科技的App開發，具備豐富的電商與社群平台開發經驗，能針對不同產業需求，提供客製化的解決方案，並提升產品的用戶體驗與商業價值。",
   projects: [
     {
-      name: "故宮精品網路商城",
+      name: "故宮精品網路商城 App",
       description:
-        "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
+        "成功開發故宮精品網路商城App，採用Flutter實現跨平台開發，並通過資安認證與無障礙檢測。透過生動的互動方式呈現故宮文物，提升用戶體驗，成功將故宮文物推向全球，並帶動了線上銷售額的成長。",
       image: ["/assets/img/npmshops.png"],
-      responsible: ["App開發", "Apple Pay"],
-      link: "https://nextui.org",
+      responsible: ["Flutter開發", "WebView整合", "Apple Pay"],
+      link: "https://www.npmshops.com",
     },
     {
-      name: "NextUI",
+      name: "Slash123 App",
       description:
-        "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
-      image: ["/assets/img/npmshops.png"],
-      responsible: ["designer", "developer"],
-      link: "https://nextui.org",
-    },
-    {
-      name: "NextUI",
-      description:
-        "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
-      image: ["/assets/img/npmshops.png"],
-      responsible: ["designer", "developer"],
-      link: "https://nextui.org",
-    },
-    {
-      name: "NextUI",
-      description:
-        "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
-      image: ["/assets/img/npmshops.png"],
-      responsible: ["designer", "developer"],
-      link: "https://nextui.org",
-    },
-    {
-      name: "NextUI",
-      description:
-        "我在這個專案中負責網頁設計與切版製作，獨立完成網站的Web和Mobile設計，同時，我也與客戶進行密切的溝通，協調風格定調和版位需求。我注重細節，致力於提供符合客戶需求的設計方案，並確保網站在不同平台上呈現出色的視覺效果。",
-      image: ["/assets/img/npmshops.png"],
-      responsible: ["designer", "developer"],
-      link: "https://nextui.org",
+        "成功開發Slash123網紅活動平台App，採用Flutter實現跨平台開發，並整合多種社群API。平台透過精準的演算法推薦，成功促成了眾多網紅與品牌的合作，提升了行銷效率，並為品牌帶來了可觀的曝光量。",
+      image: ["/assets/img/slash.png"],
+      responsible: ["Flutter開發", "第三方登入", "API串接"],
+      link: "https://slash123.com",
     },
   ],
 };

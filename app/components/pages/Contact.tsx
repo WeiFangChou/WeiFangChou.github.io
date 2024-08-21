@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, Input, Spinner, Textarea } from "@nextui-org/react";
 import { useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
@@ -7,10 +9,10 @@ import { MdPerson } from "react-icons/md";
 import React from "react";
 
 export default function Projects() {
-  const [email, setEmail] = useState("chou@gmail.com");
-  const [phone, setPhone] = useState("0987654321");
-  const [name, setName] = useState("Jack");
-  const [message, setMessage] = useState("Message");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
   const [sendMessage, setSendMessage] = useState(0);
 
   const validateEmail = (email: string) =>
@@ -24,11 +26,9 @@ export default function Projects() {
 
   async function submit(e: any) {
     e.preventDefault();
-    console.log("Test 0");
     setSendMessage(2);
     await new Promise((resolve) => setTimeout(resolve, 500));
     if (name == "" || email == "" || phone == "" || message == "") {
-      console.log("Test 1", email, name, phone, message);
       setSendMessage(4);
       setTimeout(() => {
         setSendMessage(0);
@@ -36,9 +36,7 @@ export default function Projects() {
 
       return;
     }
-    console.log("Test Email", isInvalidEmail);
     if (isInvalidEmail) {
-      console.log("Test Email 1");
       setSendMessage(2);
       await new Promise((resolve) => setTimeout(resolve, 500));
       setSendMessage(4);
@@ -50,8 +48,6 @@ export default function Projects() {
     }
 
     try {
-      console.log("Test");
-
       let response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -73,12 +69,12 @@ export default function Projects() {
     <div className="md:flex justify-center " id="contact">
       <div className="md:w-1/2 sm:w-full">
         <form method="post" onSubmit={submit}>
-          <h1 className="text-3xl font-bold p-3">Contact Me</h1>
+          <h1 className="text-3xl font-bold p-3 font-mono">聯絡我Contact Me</h1>
           <div className="p-3">
             <Input
               isClearable
               isRequired
-              color="default"
+              color={name == "" ? "danger" : "success"}
               label="Name"
               placeholder="Enter your name"
               startContent={<MdPerson />}
@@ -91,8 +87,9 @@ export default function Projects() {
           </div>
           <div className="p-3">
             <Input
+              isClearable
               isRequired
-              color="default"
+              color={phone == "" ? "danger" : "success"}
               label="Phone"
               placeholder="Enter your phone"
               startContent={<FaPhone />}
@@ -103,15 +100,18 @@ export default function Projects() {
           </div>
           <div className="p-3">
             <Input
+              isClearable
               isRequired
-              color={isInvalidEmail ? "danger" : "success"}
+              color={
+                email == "" ? "danger" : isInvalidEmail ? "danger" : "success"
+              }
               isInvalid={isInvalidEmail}
               label="Email"
               placeholder="Enter your email"
               startContent={<HiOutlineMail />}
+              style={{ color: "white" }}
               type="email"
               value={email}
-              variant="bordered"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -119,15 +119,7 @@ export default function Projects() {
             <Textarea
               isMultiline
               isRequired
-              classNames={{
-                label: "text-black/50 dark:text-white/90",
-                input: [
-                  "bg-transparent",
-                  "text-black/90 dark:text-white/90",
-                  "placeholder:text-default-700/50 dark:placeholder:text-white/60",
-                ],
-              }}
-              color="default"
+              color={message == "" ? "danger" : "success"}
               label="Messages"
               minRows={10}
               size="lg"

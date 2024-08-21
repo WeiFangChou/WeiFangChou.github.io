@@ -1,4 +1,4 @@
-"use client";
+
 import { NaviBar } from "./components/navbar";
 
 import HeroSection from "@/app/components/pages/HeroSection";

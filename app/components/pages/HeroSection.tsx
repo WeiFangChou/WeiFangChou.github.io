@@ -1,3 +1,5 @@
+"use client";
+
 import { Image, Link } from "@nextui-org/react";
 import { TypeAnimation } from "react-type-animation";
 import { FaMedium } from "react-icons/fa6";
@@ -6,7 +8,7 @@ import { useState } from "react";
 
 import { GithubIcon } from "../icons";
 
-import { myProfessions } from "@/config/site";
+import { myProfessions, myProfile } from "@/config/site";
 
 export default function HeroSection() {
   const [resumeOpen, setResumeOpen] = useState(false);
@@ -30,7 +32,7 @@ export default function HeroSection() {
             <h1 className=" col-span-1 mb-4 text-4xl lg:text-left md:text-center sm:text-center  lg:text-6xl font-extrabold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text">
               Hello, I&apos;m
             </h1>
-            <h1 className=" col-span-1 mb-4 text-4xl lg:text-right md:text-center sm:text-center lg:text-6xl font-extrabold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text">
+            <h1 className=" col-span-1 mb-4 text-4xl lg:text-right md:text-center sm:text-center lg:text-6xl font-extrabold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text ">
               WeiFang Chou
             </h1>
           </div>
@@ -49,8 +51,8 @@ export default function HeroSection() {
               wrapper="p"
             />
           </h1>
-          <p className="text-lg lg:text-xl sm:text-center">
-            我熱愛挑戰自己，並不斷追求個人成長和學習。我的經驗涵蓋了設計與前端，並且我喜歡在這些領域中不斷創新和探索。我擁有良好的溝通和團隊合作能力，並能夠在壓力下保持高效率。
+          <p className="text-lg lg:text-xl sm:text-center hover:text-primary">
+            {myProfile.description}
           </p>
           <div className="m-5">
             <Link
@@ -59,7 +61,7 @@ export default function HeroSection() {
               color="foreground"
               href={"https://github.com/weiFangChou"}
             >
-              <GithubIcon size={55} />
+              <GithubIcon className="hover:text-primary" size={55} />
             </Link>
             <Link
               isExternal
@@ -67,7 +69,7 @@ export default function HeroSection() {
               color="foreground"
               href="https://medium.com/@chou.wei.fang"
             >
-              <FaMedium size={55} />
+              <FaMedium className="hover:text-primary" size={55} />
             </Link>
 
             <Link
@@ -76,7 +78,7 @@ export default function HeroSection() {
               color="foreground"
               href="/resume.pdf"
             >
-              <SiGoogledocs size={55} />
+              <SiGoogledocs className="hover:text-primary" size={55} />
             </Link>
           </div>
         </div>
