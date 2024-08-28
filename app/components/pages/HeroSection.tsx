@@ -54,7 +54,7 @@ export default function HeroSection() {
           <p className="text-lg lg:text-xl sm:text-center hover:text-primary">
             {myProfile.description}
           </p>
-          <div className="m-5">
+          <div className="m-5 text-center">
             <Link
               isExternal
               className="m-5"

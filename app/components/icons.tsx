@@ -3,6 +3,8 @@ import { Lexend_Deca } from "next/font/google";
 
 import { IconSvgProps } from "@/types";
 
+
+
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
   width,

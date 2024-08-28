@@ -19,9 +19,9 @@ import { myExperience, mySkills } from "@/config/site";
 
 export default function About() {
   return (
-    <div className="mt-10" id="about">
+    <div className="mt-20" id="about">
       <div className=" md:flex md:grid-cols-2">
-        <div className="md:w-1/2  md:col-span-1 content-start">
+        <div className="md:w-1/2  md:col-span-1 content-start grid-cols-3">
           <h2 className="text-5xl font-black m-4 hover:text-primary">
             Skills &<br /> Experience
           </h2>
