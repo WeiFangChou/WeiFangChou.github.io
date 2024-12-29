@@ -15,17 +15,19 @@ export function ContactForm() {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const values = Object.fromEntries(
-      new FormData(e.target as HTMLFormElement)
-    );
+    console.log({ name, email, phone, message });
     await fetch("/api/contact", {
       method: "POST",
-      body: JSON.stringify(values),
+      body: JSON.stringify({ name, email, phone, message }),
     });
 
     setIsSubmitting(false);
   };
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -39,6 +41,8 @@ export function ContactForm() {
               label="Name"
               isRequired
               id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               errorMessage={({ validationDetails }) => {
                 if (validationDetails.valueMissing) {
                   return "Please enter your name";
@@ -50,6 +54,8 @@ export function ContactForm() {
               isRequired
               id="email"
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               errorMessage={({ validationDetails }) => {
                 if (validationDetails.valueMissing) {
                   return "Please enter your email";
@@ -63,6 +69,8 @@ export function ContactForm() {
               label="Phone"
               id="phone"
               type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               errorMessage={({ validationDetails }) => {
                 if (validationDetails.valueMissing) {
                   return "Please enter your phone number";
@@ -76,6 +84,8 @@ export function ContactForm() {
               label="Message"
               isRequired
               id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               errorMessage={({ validationDetails }) => {
                 if (validationDetails.valueMissing) {
                   return "Please enter your message";
