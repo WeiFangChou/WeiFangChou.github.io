@@ -12,17 +12,15 @@ import {
 import { useState } from "react";
 
 export function ContactForm() {
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const phone = e.target.phone.value;
-    const message = e.target.message.value;
-    console.log(JSON.stringify({ name, email, phone, message }));
-    fetch("/api/contact", {
+    const values = Object.fromEntries(
+      new FormData(e.target as HTMLFormElement)
+    );
+    await fetch("/api/contact", {
       method: "POST",
-      body: JSON.stringify({ name, email, phone, message }),
+      body: JSON.stringify(values),
     });
 
     setIsSubmitting(false);
