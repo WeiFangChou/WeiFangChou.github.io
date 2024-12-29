@@ -3,6 +3,8 @@ import "./globals.css";
 import "rsuite/dist/rsuite-no-reset.min.css";
 import { siteConfig } from "./config/site";
 import { Providers } from "./providers/provider";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -42,7 +44,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
-          
+          <Analytics />
+          <SpeedInsights />
           {children}
         </Providers>
       </body>

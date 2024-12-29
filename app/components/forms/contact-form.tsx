@@ -33,7 +33,7 @@ export function ContactForm() {
     <div className="flex justify-center items-center h-screen">
       <Card className="w-full  max-w-md p-4">
         <CardHeader>
-          <p className="text-2xl font-bold">Contact Us</p>
+          <p className="text-2xl font-bold">Contact Me</p>
         </CardHeader>
         <CardBody>
           <Form onSubmit={onSubmit} validationBehavior="native" id="contact">
