@@ -1,5 +1,4 @@
 import {
-  Button,
   Card,
   CardBody,
   CardHeader,
@@ -7,7 +6,6 @@ import {
   Progress,
 } from '@heroui/react';
 import { mySkills, SubSkill } from "../../config/site";
-import { div } from "framer-motion/client";
 
 export const SkillSection = () => {
   return (

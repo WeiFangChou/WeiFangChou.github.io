@@ -52,7 +52,7 @@ export const HomeSection = () => {
                 className="text-md font-semibold"
                 isExternal={!link.href.startsWith("#")}
                 isIconOnly={link.icon !== undefined}
-                color={link.color !== undefined ? link.color : undefined}
+                color='default'
               >
                 <AnimateIcon>
                   {link.icon && <link.icon />}

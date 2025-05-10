@@ -15,10 +15,11 @@ export function ContactForm() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const phone = e.target.phone.value;
-    const message = e.target.message.value;
+    const formData = new FormData(e.target as HTMLFormElement);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const message = formData.get("message") as string;
     console.log(JSON.stringify({ name, email, phone, message }));
     fetch("/api/contact", {
       method: "POST",
