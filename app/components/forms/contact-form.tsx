@@ -8,7 +8,7 @@ import {
   Form,
   Input,
   Textarea,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { useState } from "react";
 
 export function ContactForm() {

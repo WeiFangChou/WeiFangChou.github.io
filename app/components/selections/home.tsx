@@ -1,5 +1,5 @@
 import { myProfile } from "../../config/site";
-import { Button, Image, Link } from "@nextui-org/react";
+import { Button, Image, Link } from "@heroui/react";
 import { AnimateIcon } from "../imgs/icons";
 
 export const HomeSection = () => {

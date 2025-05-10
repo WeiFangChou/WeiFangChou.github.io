@@ -5,7 +5,7 @@ import {
   CardHeader,
   Divider,
   Progress,
-} from "@nextui-org/react";
+} from '@heroui/react';
 import { mySkills, SubSkill } from "../../config/site";
 import { div } from "framer-motion/client";
 

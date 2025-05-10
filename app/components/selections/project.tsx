@@ -1,4 +1,4 @@
-import { Card, CardBody, Chip, Image, Button, Link } from "@nextui-org/react";
+import { Card, CardBody, Chip, Image, Button, Link } from '@heroui/react';
 import { myProjects } from "../../config/site";
 import { ExternalLinkIcon } from "../imgs/icons";
 

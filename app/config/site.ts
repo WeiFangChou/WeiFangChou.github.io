@@ -101,12 +101,22 @@ export type Experience = {
 
 export const myExperience: Experience[] = [
   {
+    startDate: "2025.02",
+    endDate: "Present",
+    title: "iOS Engineer",
+    company: "台灣利優資訊科技有限公司",
+    location: "台北市信義區",
+    icon: '/image/experiences/nityo.jpg',
+    description:
+      "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
+  },
+  {
     startDate: "2023.03",
     endDate: "2024.07",
     title: "App 開發工程師",
     company: "亞路科技股份有限公司",
     location: "台北市中正區",
-    icon: '/image/experience/noonspace.jpg',
+    icon: '/image/experiences/noonspace.jpg',
     description:
       "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
   },
@@ -116,7 +126,7 @@ export const myExperience: Experience[] = [
     title: "軟體工程師",
     location: "新竹市東區",
     company: "緯創軟體股份有限公司",
-    icon: '/image/experience/wits.svg',
+    icon: '/image/experiences/wits.png',
     description:
       "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
   },
@@ -126,7 +136,7 @@ export const myExperience: Experience[] = [
     title: "資訊助理工程師",
     company: "仁大資訊股份有限公司",
     location: "新北市五股區",
-    icon: '/image/experience/wits.svg',
+    icon: '/image/experiences/hpi.jpg',
     description:
       "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
   },
@@ -136,7 +146,7 @@ export const myExperience: Experience[] = [
     title: "資訊網路工程系",
     company: "龍華科技大學",
     location: "桃園市龜山區",
-    icon: '/image/experience/lhu.png',
+    icon: '/image/experiences/lhu.png',
     description:
       "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
   },

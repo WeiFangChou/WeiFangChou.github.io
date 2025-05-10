@@ -8,7 +8,7 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-} from "@nextui-org/navbar";
+} from "@heroui/navbar";
 import Link from "next/link";
 import Image from "next/image";
 import { ThemeSwitcher } from "../ThemeSwitcher";
