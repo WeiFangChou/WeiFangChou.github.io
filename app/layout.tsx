@@ -5,6 +5,7 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { siteConfig } from "./config/site";
 import { Providers } from "./providers/provider";
 import { ScrollToTop } from "./components/scroll-to-top";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -50,6 +51,7 @@ export default function RootLayout({
       </head>
       <body>
         <ScrollToTop />
+        <SpeedInsights />
         <GoogleAnalytics gaId="G-BZCW7DTN5N" />
         <GoogleTagManager gtmId="GTM-N997P8ZQ" />
         <Providers>{children}</Providers>
