@@ -26,10 +26,11 @@ export default function NavigationBar() {
       onMenuOpenChange={setIsMenuOpen}
       isBlurred
       shouldHideOnScroll
-      maxWidth="lg"
+      maxWidth="xl"
       classNames={{
-        // base: "bg-white/50 backdrop-blur-sm",
-        item: "text-foreground",
+        base: "py-4",
+        wrapper: "px-6 md:px-12 lg:px-20",
+        item: "text-foreground/60 hover:text-foreground data-[active=true]:text-foreground",
       }}
     >
       <NavbarContent justify="start">
@@ -53,7 +54,12 @@ export default function NavigationBar() {
       <NavbarContent className="max-md:hidden">
         {siteConfig.navItems.map((item) => (
           <NavbarItem key={item.href}>
-            <Link href={item.href}>{item.label}</Link>
+            <Link 
+              href={item.href}
+              className="text-base font-medium transition-colors"
+            >
+              {item.label}
+            </Link>
           </NavbarItem>
         ))}
       </NavbarContent>

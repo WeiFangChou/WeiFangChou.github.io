@@ -1,66 +1,91 @@
+"use client";
+
 import { myProfile } from "../../config/site";
-import { Button, Image, Link } from "@heroui/react";
+import { Button, Link } from "@heroui/react";
 import { AnimateIcon } from "../imgs/icons";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export const HomeSection = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center content-center lg:h-[50dvh] bg-background text-foreground"
+      className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground"
       id="home"
     >
-      <div className="h-full sm:flex sm:justify-between md:flex md:justify-between p-8 items-center">
-        <div className="items-center justify-center content-center md:max-w-[350px] aspect-square">
-          <Image src={myProfile.avatar} isBlurred alt="avatar" radius="full" className="aspect-square" />
-        </div>
-        <div className="col-span-1 sm:min-w-[200px] md:max-w-[600px]">
-          <p className="text-2xl lg:text-4xl font-bold m-4">
-            Hi, I&apos;m WeiFang Chou
-          </p>
-          <p className="text-xl lg:text-3xl font-bold m-4">iOS Developer</p>
-          <p className="sm:text-base lg:text-xl p-4 sm:min-w-[200px] w-full">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+        {/* 左側文字 */}
+        <div className="flex-1 max-w-2xl">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+            Hi, I&apos;m <span className="text-primary">WeiFang Chou</span>
+          </h1>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground-700 mb-8">
+            iOS Developer
+          </h2>
+          <p className="text-lg md:text-xl text-foreground-700 leading-relaxed mb-10">
             {myProfile.description}
           </p>
-          <div className="flex p-4 gap-3 justify-stretch">
+
+          {/* 按鈕群組 */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-10">
             <Button
-              size="md"
-              className="sm:w-full md:max-w-[150px]"
+              size="lg"
+              className="px-8 py-6 text-lg font-semibold"
               as={Link}
               color="primary"
               href={myProfile.contact}
+              variant="shadow"
             >
-              <p className="text-white font-bold">Contact Me</p>
+              Contact Me
             </Button>
             <Button
-              size="md"
-              className="sm:w-full md:max-w-[150px]"
+              size="lg"
+              className="px-8 py-6 text-lg font-semibold"
               as={Link}
               href={myProfile.resume}
-              color="default"
+              variant="bordered"
+              color="primary"
             >
-              <p className="text-[rgba(255, 255, 255, 0.15)] font-bold">
-                Download Resume
-              </p>
+              Download Resume
             </Button>
           </div>
 
-          <div className="flex gap-4 m-4">
+          {/* 社群連結 */}
+          <div className="flex gap-4">
             {myProfile.socialLinks.map((link) => (
               <Button
                 as={Link}
                 key={link.label}
                 href={link.href}
-                className="text-md font-semibold"
+                className="w-12 h-12 min-w-unit-12"
                 isExternal={!link.href.startsWith("#")}
-                isIconOnly={link.icon !== undefined}
-                color='default'
+                isIconOnly
+                variant="flat"
+                color="default"
               >
-                <AnimateIcon>
-                  {link.icon && <link.icon />}
-                  {!link.icon && <p>{link.label}</p>}
-                </AnimateIcon>
+                <AnimateIcon>{link.icon && <link.icon />}</AnimateIcon>
               </Button>
             ))}
           </div>
+        </div>
+
+        {/* 右側頭像：RWD + 手機高度限制 + 動畫 */}
+        <div className="flex-1 flex items-center justify-center bg-transparent">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative"
+          >
+            <div className="p-2 sm:p-2 md:p-12">
+              <Image
+                src={myProfile.avatar}
+                alt="avatar"
+                width={500}
+                height={500}
+                className="md:rounded-lg  object-fill max-h-[70vw] md:max-h-[500px] w-auto"
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

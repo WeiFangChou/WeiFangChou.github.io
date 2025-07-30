@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "rsuite/dist/rsuite-no-reset.min.css";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { siteConfig } from "./config/site";
 import { Providers } from "./providers/provider";
+import { ScrollToTop } from "./components/scroll-to-top";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     "Next.JS",
     "iOS Swift",
     "Flutter",
-    "App"
+    "App",
   ],
   creator: "WeiFang Chou",
 };
@@ -39,12 +41,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="HFFvAJhNGJy85qnayddRdMH2Wd4dkpXaKs4v00X7iP8"
+        />
+      </head>
       <body>
-        <Providers>
-          
-          {children}
-        </Providers>
+        <ScrollToTop />
+        <GoogleAnalytics gaId="G-BZCW7DTN5N" />
+        <GoogleTagManager gtmId="GTM-N997P8ZQ" />
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { CocoapodsIcon, CredlyIcon, ExpressIcon, FlutterIcon, GithubIcon, IllustratorIcon, LinkedInIcon, LogosNodejsIcon, MediumIcon, NextjsIcon, PhotoshopIcon, SwiftIcon, TailwindIcon, TypeScriptIcon, XIcon } from "../components/imgs/icons";
+import { CredlyIcon, ExpressIcon, FastAPIIcon, FlutterIcon, GithubIcon, IllustratorIcon, LinkedInIcon, MediumIcon, NextjsIcon, PhotoshopIcon, SwiftIcon, TailwindIcon, TypeScriptIcon, XIcon } from "../components/imgs/icons";
 
 export const myProfessions = [
   " iOS Developer",
@@ -54,7 +54,7 @@ export const myProfile = {
   name: "周暐芳 WeiFang",
   description:
     "我熱衷於App開發，並積極拓展後端技能。我享受不斷學習和挑戰自我的過程，致力於在設計與開發領域追求卓越。我將持續學習最新的開發技術，勇於超越自我，目標成為一名全方位的全端工程師。",
-  avatar: "/avatar.jpg",
+  avatar: "/avatar.png",
   skillsDescription: "我對新技術充滿好奇，目前正在深入研究學習Next.JS 和TailWind CSS，以提升前端開發能力。同時也持續學習App開發技能，並積極開發更完整的專案。",
   experienceDescription: "我對新技術充滿好奇，目前正在深入研究學習Next.JS 和TailWind CSS，以提升前端開發能力。同時也持續學習App開發技能，並積極開發更完整的專案。",
   projectDescription: "曾參與故宮精品與亞路科技的App開發，具備豐富的電商與社群平台開發經驗，能針對不同產業需求，提供客製化的解決方案，並提升產品的用戶體驗與商業價值。",
@@ -102,13 +102,13 @@ export type Experience = {
 export const myExperience: Experience[] = [
   {
     startDate: "2025.02",
-    endDate: "Present",
+    endDate: "2025.07",
     title: "iOS Engineer",
     company: "台灣利優資訊科技有限公司",
     location: "台北市信義區",
     icon: '/image/experiences/nityo.jpg',
     description:
-      "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
+      "於Nityo在國泰銀行擔任駐點iOS工程師，參與官方行動銀行 App 的首頁改版與功能修改，負責 iOS UI調整及與後端 API 的串接，確保功能穩定且使用者體驗提升。",
   },
   {
     startDate: "2023.03",
@@ -118,17 +118,17 @@ export const myExperience: Experience[] = [
     location: "台北市中正區",
     icon: '/image/experiences/noonspace.jpg',
     description:
-      "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
+      "主要負責App開發，使用Flutter實現跨平台開發，並整合多種社群API。平台透過精準的演算法推薦，成功促成了眾多網紅與品牌的合作，提升了行銷效率，並為品牌帶來了可觀的曝光量。",
   },
   {
     startDate: "2021.11",
     endDate: "2023.02",
     title: "軟體工程師",
-    location: "新竹市東區",
     company: "緯創軟體股份有限公司",
+    location: "新竹市東區",
     icon: '/image/experiences/wits.png',
     description:
-      "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
+      "在 WITS 擔任全端軟體工程師，主要負責企業級軟體解決方案的開發與維護。參與大型專案的系統架構設計，使用多種技術棧包含 .NET、Java 和 JavaScript。負責客戶需求分析、系統設計文件撰寫，以及跨團隊協作確保專案順利進行。期間累積了豐富的企業軟體開發經驗和團隊合作能力。",
   },
   {
     startDate: "2019.07",
@@ -138,7 +138,7 @@ export const myExperience: Experience[] = [
     location: "新北市五股區",
     icon: '/image/experiences/hpi.jpg',
     description:
-      "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
+      "擔任資訊助理工程師，負責公司內部系統維護和技術支援工作。協助開發和維護企業資源規劃系統（ERP），學習資料庫管理和系統整合技術。參與用戶培訓和技術文件撰寫，培養了良好的溝通能力和解決問題的技巧。這段經歷為我後續的軟體開發生涯奠定了堅實的基礎。",
   },
   {
     startDate: "2016.09",
@@ -148,7 +148,7 @@ export const myExperience: Experience[] = [
     location: "桃園市龜山區",
     icon: '/image/experiences/lhu.png',
     description:
-      "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
+      "主修資訊網路工程，學習程式設計、資料庫管理、網路架構和系統分析等核心技能。積極參與程式設計競賽和專題製作，培養了扎實的程式設計基礎和問題解決能力。畢業專題聚焦於App開發，這段學習經歷激發了我對 App 開發的熱忱，並為日後的職業發展方向奠定了重要基礎。",
   },
 ];
 
@@ -169,12 +169,12 @@ export const mySkills: MainSkill[] = [
     skills: [
       {
         name: "Swift",
-        level: 4.5,
+        level: 3,
         icon: SwiftIcon,
       },
       {
         name: "Flutter",
-        level: 4,
+        level: 3.5,
         icon: FlutterIcon,
       },
     ],
@@ -182,30 +182,32 @@ export const mySkills: MainSkill[] = [
   {
     typeName: "Front-end",
     skills: [
-      {
-        name: "TailwindCSS",
-        level: 2,
-        icon: TailwindIcon,
-      },
-    ],
-  },
-  {
-    typeName: "Back-end",
-    skills: [
-      {
-        name: "TypeScript",
-        level: 3.5,
-        icon: TypeScriptIcon,
-      },
+
       {
         name: "Next.js",
         level: 3.5,
         icon: NextjsIcon,
       },
       {
-        name: "Node.js",
-        level: 4,
-        icon: LogosNodejsIcon,
+        name: "TailwindCSS",
+        level: 2,
+        icon: TailwindIcon,
+      },
+      {
+        name: "TypeScript",
+        level: 3.5,
+        icon: TypeScriptIcon,
+      },
+    ],
+  },
+  {
+    typeName: "Back-end",
+    skills: [
+
+      {
+        name: "FastAPI",
+        level: 3.5,
+        icon: FastAPIIcon,
       },
       {
         name: "Express.js",
@@ -214,33 +216,17 @@ export const mySkills: MainSkill[] = [
       },
     ],
   },
-
-  {
-    typeName: "Framework",
-    skills: [
-      {
-        name: "Cocoapods",
-        level: 5,
-        icon: CocoapodsIcon,
-      },
-      {
-        name: "SwiftPackageManager",
-        level: 5,
-        icon: SwiftIcon,
-      },
-    ],
-  },
   {
     typeName: "Design",
     skills: [
       {
         name: "Illustrator",
-        level: 5,
+        level: 3.5,
         icon: IllustratorIcon,
       },
       {
         name: "Photoshop",
-        level: 5,
+        level: 2.5,
         icon: PhotoshopIcon,
       },
     ],
@@ -255,14 +241,22 @@ type Project = {
   link: string;
 };
 
-export const myProjects: Project[] = [
+export const workProjects: Project[] = [
   {
-    name: "舖可BookCourt",
+    name: "GoodShare",
     description:
-      "我們打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
-    image: ["/image/projects/building.jpeg"],
-    responsible: ["iOS Swift", "App Clips", "Python FastAPI", "Next.JS", "TailwindCSS"],
-    link: "https://bookcourt.tw",
+      "《好享 GoodShare》是B2B2C的社群電商媒合平臺。目的就是打造一個網紅、品牌商、創作者以及消費者的共好生態圈。每年不定期舉辦O2O媒合活動，内容涵蓋文創美食、科技生活、時尚精品等商品，並提供合理的激勵獎金。",
+    image: ["/image/projects/goodshare.png"],
+    responsible: ["WordPress開發", 'WooCommerce', "API串接", "SEO優化"],
+    link: "https://goodshare.shop",
+  },
+  {
+    name: "Cube App",
+    description:
+      "於Nityo在國泰銀行擔任駐點iOS工程師，參與官方行動銀行 App 的首頁改版與功能優化，負責 iOS 介面優化及與後端 API 的串接，確保功能穩定且使用者體驗提升。",
+    image: ["/image/projects/cubeapp.jpeg"],
+    responsible: ["iOS 開發", "Swift", 'Objective-C', "API串接"],
+    link: "https://apple.co/3Gsy1Yg",
   },
   {
     name: "故宮精品網路商城 App",
@@ -279,5 +273,18 @@ export const myProjects: Project[] = [
     image: ["/image/projects/slash.png"],
     responsible: ["Flutter開發", "第三方登入", "API串接"],
     link: "https://slash123.com",
+  },
+];
+
+
+export const myProjects: Project[] = [
+
+  {
+    name: "舖可BookCourt",
+    description:
+      "打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
+    image: ["/image/projects/building.jpeg"],
+    responsible: ["iOS Swift", "App Clips", "Python FastAPI", "Next.JS", "TailwindCSS"],
+    link: "https://bookcourt.tw",
   },
 ];

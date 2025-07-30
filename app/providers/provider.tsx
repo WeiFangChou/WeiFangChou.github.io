@@ -10,7 +10,7 @@ export function Providers({
   children: React.ReactNode;
 }) {
   return (
-    <NextThemesProvider attribute="class" defaultTheme="dark" {...props}>
+    <NextThemesProvider attribute="class" defaultTheme="system" {...props}>
       <HeroUIProvider>{children}</HeroUIProvider>
     </NextThemesProvider>
   );

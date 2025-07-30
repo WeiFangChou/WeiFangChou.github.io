@@ -257,11 +257,9 @@ export const MediumIcon = ({
 export const XIcon = ({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) => {
   return (
     <svg
@@ -269,7 +267,6 @@ export const XIcon = ({
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      
     >
       <g fill="currentColor">
         <path d="M1 2h2.5L3.5 2h-2.5zM5.5 2h2.5L7.2 2h-2.5z">
@@ -306,11 +303,9 @@ export const XIcon = ({
 export const CredlyIcon = ({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) => {
   return (
     <svg
@@ -318,7 +313,6 @@ export const CredlyIcon = ({
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      
     >
       <path
         fill="currentColor"
@@ -331,11 +325,9 @@ export const CredlyIcon = ({
 export function TypeScriptIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -343,7 +335,6 @@ export function TypeScriptIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#007acc" rx={60}></rect>
@@ -359,11 +350,9 @@ export function TypeScriptIcon({
 export function PHPIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -371,7 +360,6 @@ export function PHPIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#f4f2ed" rx={60}></rect>
@@ -387,7 +375,6 @@ export function PHPIcon({
 export function SwiftIcon({
   height = 24,
   width = 24,
-
 }: {
   height?: number;
   width?: number;
@@ -413,11 +400,9 @@ export function SwiftIcon({
 export function FastapiIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -425,7 +410,6 @@ export function FastapiIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#049789" rx={60}></rect>
@@ -441,11 +425,9 @@ export function FastapiIcon({
 export function FigmaDark({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -453,7 +435,6 @@ export function FigmaDark({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#242938" rx={60}></rect>
@@ -492,11 +473,9 @@ export function FigmaDark({
 export function NextjsIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -504,7 +483,6 @@ export function NextjsIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#f4f2ed" rx={60}></rect>
@@ -520,11 +498,9 @@ export function NextjsIcon({
 export function PostmanIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -532,7 +508,6 @@ export function PostmanIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#ff6c37" rx={60}></rect>
@@ -616,11 +591,9 @@ export function PostmanIcon({
 export function NginxIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -628,7 +601,6 @@ export function NginxIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#009639" rx={60}></rect>
@@ -644,11 +616,9 @@ export function NginxIcon({
 export function DockerIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -656,7 +626,6 @@ export function DockerIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#2396ed" rx={60}></rect>
@@ -672,11 +641,9 @@ export function DockerIcon({
 export function FlutterIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -684,7 +651,6 @@ export function FlutterIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#f4f2ed" rx={60}></rect>
@@ -708,11 +674,9 @@ export function FlutterIcon({
 export function PhotoshopIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -720,7 +684,6 @@ export function PhotoshopIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#001e36" rx={60}></rect>
@@ -736,11 +699,9 @@ export function PhotoshopIcon({
 export function IllustratorIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -748,7 +709,6 @@ export function IllustratorIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <g fill="none">
         <rect width={256} height={256} fill="#300" rx={60}></rect>
@@ -764,11 +724,9 @@ export function IllustratorIcon({
 export function CocoapodsIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -776,7 +734,6 @@ export function CocoapodsIcon({
       width={width}
       height={height}
       viewBox="0 0 256 256"
-      
     >
       <path fill="#fa2a00" d="M255.349 255.35H0V0h255.349z"></path>
       <path
@@ -790,11 +747,9 @@ export function CocoapodsIcon({
 export function ExpressIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -802,7 +757,6 @@ export function ExpressIcon({
       width={width}
       height={height}
       viewBox="0 0 128 128"
-      
     >
       <path d="M126.67 98.44c-4.56 1.16-7.38.05-9.91-3.75c-5.68-8.51-11.95-16.63-18-24.9c-.78-1.07-1.59-2.12-2.6-3.45C89 76 81.85 85.2 75.14 94.77c-2.4 3.42-4.92 4.91-9.4 3.7l26.92-36.13L67.6 29.71c4.31-.84 7.29-.41 9.93 3.45c5.83 8.52 12.26 16.63 18.67 25.21c6.45-8.55 12.8-16.67 18.8-25.11c2.41-3.42 5-4.72 9.33-3.46c-3.28 4.35-6.49 8.63-9.72 12.88c-4.36 5.73-8.64 11.53-13.16 17.14c-1.61 2-1.35 3.3.09 5.19C109.9 76 118.16 87.1 126.67 98.44M1.33 61.74c.72-3.61 1.2-7.29 2.2-10.83c6-21.43 30.6-30.34 47.5-17.06C60.93 41.64 63.39 52.62 62.9 65H7.1c-.84 22.21 15.15 35.62 35.53 28.78c7.15-2.4 11.36-8 13.47-15c1.07-3.51 2.84-4.06 6.14-3.06c-1.69 8.76-5.52 16.08-13.52 20.66c-12 6.86-29.13 4.64-38.14-4.89C5.26 85.89 3 78.92 2 71.39c-.15-1.2-.46-2.38-.7-3.57q.03-3.04.03-6.08m5.87-1.49h50.43c-.33-16.06-10.33-27.47-24-27.57c-15-.12-25.78 11.02-26.43 27.57"></path>
     </svg>
@@ -812,11 +766,9 @@ export function ExpressIcon({
 export function LogosNodejsIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -824,7 +776,6 @@ export function LogosNodejsIcon({
       width={width}
       height={height}
       viewBox="0 0 256 289"
-      
     >
       <path
         fill="#539e43"
@@ -837,11 +788,9 @@ export function LogosNodejsIcon({
 export function TailwindIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -849,7 +798,6 @@ export function TailwindIcon({
       width={width}
       height={height}
       viewBox="0 0 128 128"
-      
     >
       <path
         fill="#38bdf8"
@@ -862,11 +810,9 @@ export function TailwindIcon({
 export function ExternalLinkIcon({
   height = 24,
   width = 24,
-  
 }: {
   height?: number;
   width?: number;
- 
 }) {
   return (
     <svg
@@ -874,7 +820,6 @@ export function ExternalLinkIcon({
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      
     >
       <path
         fill="none"
@@ -884,6 +829,69 @@ export function ExternalLinkIcon({
         strokeWidth={2}
         d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"
       ></path>
+    </svg>
+  );
+}
+export function FastAPIIcon({
+  height = 24,
+  width = 24,
+}: {
+  height?: number;
+  width?: number;
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="#049688"
+        d="M12 2.5L3.5 8.5v7l8.5 6l8.5-6v-7L12 2.5zm-.5 9.8v-5l3.5 7h-2.2v5l-3.5-7H11.5z"
+      />
+    </svg>
+  );
+}
+export function EmailIcon({
+  height = 24,
+  width = 24,
+}: {
+  height?: number;
+  width?: number;
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12v1.45q0 1.475-1.012 2.513T18.5 17q-.875 0-1.65-.375t-1.3-1.075q-.725.725-1.638 1.088T12 17q-2.075 0-3.537-1.463T7 12t1.463-3.537T12 7t3.538 1.463T17 12v1.45q0 .65.425 1.1T18.5 15t1.075-.45t.425-1.1V12q0-3.35-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20h5v2zm0-7q1.25 0 2.125-.875T15 12t-.875-2.125T12 9t-2.125.875T9 12t.875 2.125T12 15"
+      />
+    </svg>
+  );
+}
+export function LocationIcon({
+  height = 24,
+  width = 24,
+}: {
+  height?: number;
+  width?: number;
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22"
+      />
     </svg>
   );
 }
