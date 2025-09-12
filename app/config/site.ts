@@ -58,6 +58,7 @@ export const myProfile = {
   skillsDescription: "我對新技術充滿好奇，目前正在深入研究學習Next.JS 和TailWind CSS，以提升前端開發能力。同時也持續學習App開發技能，並積極開發更完整的專案。",
   experienceDescription: "我對新技術充滿好奇，目前正在深入研究學習Next.JS 和TailWind CSS，以提升前端開發能力。同時也持續學習App開發技能，並積極開發更完整的專案。",
   projectDescription: "曾參與故宮精品與亞路科技的App開發，具備豐富的電商與社群平台開發經驗，能針對不同產業需求，提供客製化的解決方案，並提升產品的用戶體驗與商業價值。",
+  appStoreLink: "https://apple.co/45Rfb5r",
   socialLinks: [
     {
       label: "GitHub",
@@ -287,4 +288,57 @@ export const myProjects: Project[] = [
     responsible: ["iOS Swift", "App Clips", "Python FastAPI", "Next.JS", "TailwindCSS"],
     link: "https://bookcourt.tw",
   },
+  {
+    name: "舖可BookCourt",
+    description:
+      "打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
+    image: ["/image/projects/building.jpeg"],
+    responsible: ["iOS Swift", "App Clips", "Python FastAPI", "Next.JS", "TailwindCSS"],
+    link: "https://bookcourt.tw",
+  },
+  {
+    name: "QRCoder",
+    description:
+      "",
+    image: ["/image/projects/building.jpeg"],
+    responsible: ["iOS SwiftUI", "Safari Ex"],
+    link: "https://apps.apple.com/us/app/qrcoder-二維碼產生器/id6751326100",
+  },
 ];
+
+export type AppInfo = {
+  id: string;
+  name: string;
+  appStoreLink: string;
+  privacyTitle?: string;
+  privacyContent?: {
+    informationCollected?: string[];
+    dataUsage?: string[];
+    contactEmail?: string;
+  };
+};
+
+export const myApps: Record<string, AppInfo> = {
+  webnotify: {
+    id: "webnotify",
+    name: "WebNotify",
+    appStoreLink: "https://apps.apple.com/us/app/webnotify-網頁變動通知/id6743679166",
+    privacyTitle: "隱私權政策",
+    privacyContent: {
+      informationCollected: [],
+      dataUsage: [],
+      contactEmail: "app@fangs.dev"
+    }
+  },
+  qrcoder: {
+    id: "qrcoder",
+    name: "QRCoder",
+    appStoreLink: "https://apps.apple.com/us/app/qrcoder-二維碼產生器/id6751326100",
+    privacyTitle: "QRCoder Privacy Policy",
+    privacyContent: {
+      informationCollected: [],
+      dataUsage: ["Generating QR codes", "Improving app performance", "Providing QR code history feature"],
+      contactEmail: "app@fangs.dev"
+    }
+  }
+};
