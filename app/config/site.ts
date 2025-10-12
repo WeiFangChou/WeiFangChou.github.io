@@ -62,7 +62,7 @@ export const myProfile = {
   socialLinks: [
     {
       label: "GitHub",
-      href: "https://github.com/WeiFangChou",
+      href: "https://github.com/WeiFangChou?ref=fangs.dev",
       icon: GithubIcon,
     },
     {
@@ -289,12 +289,12 @@ export const myProjects: Project[] = [
     link: "https://bookcourt.tw",
   },
   {
-    name: "舖可BookCourt",
+    name: "WebNotify",
     description:
-      "打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
-    image: ["/image/projects/building.jpeg"],
-    responsible: ["iOS Swift", "App Clips", "Python FastAPI", "Next.JS", "TailwindCSS"],
-    link: "https://bookcourt.tw",
+      "WebNotify 是一款專為 iOS 設計的網頁變動通知應用程式。它能夠自動監控使用者指定的網頁，當網頁內容發生變化時，立即透過推播通知提醒使用者。這對於需要即時掌握資訊更新的用戶來說，是一個非常實用的工具。",
+    image: ["https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2c/fb/b3/2cfbb309-8586-c51e-7ce6-191050e461f7/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"],
+    responsible: ["iOS SwiftUI", "Safari Extension"],
+    link: "https://apple.co/468G6eG",
   },
   {
     name: "QRCoder",

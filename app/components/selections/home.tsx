@@ -41,6 +41,17 @@ export const HomeSection = () => {
               size="lg"
               className="px-8 py-6 text-lg font-semibold"
               as={Link}
+              href={myProfile.appStoreLink}
+              variant="bordered"
+              color="primary"
+              isExternal
+            >
+              View My Apps
+            </Button>
+            <Button
+              size="lg"
+              className="px-8 py-6 text-lg font-semibold"
+              as={Link}
               href={myProfile.resume}
               variant="bordered"
               color="primary"
