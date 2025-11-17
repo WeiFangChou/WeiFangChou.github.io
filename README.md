@@ -16,6 +16,17 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Environment variables
+
+To enable the contact form protection you need to add the following variables to your `.env.local` file:
+
+```
+NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY=<your site key>
+CLOUDFLARE_TURNSTILE_SECRET_KEY=<your secret key>
+```
+
+The site key is exposed to the browser for rendering the Turnstile widget, while the secret key is only used on the server to validate submitted tokens with Cloudflare.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

@@ -9,15 +9,19 @@ import {
   Input,
   Textarea,
 } from "@heroui/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { myProfile } from "../../config/site";
 import { AnimateIcon, EmailIcon, LocationIcon } from "../imgs/icons";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { TurnstileWidget } from "./turnstile-widget";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [csrfToken, setCsrfToken] = useState<string>("");
+  const [captchaToken, setCaptchaToken] = useState<string>("");
+  const [captchaError, setCaptchaError] = useState<string>("");
+  const [captchaResetCounter, setCaptchaResetCounter] = useState(0);
 
   useEffect(() => {
     // Fetch CSRF token when component mounts
@@ -33,10 +37,22 @@ export function ContactForm() {
     fetchCSRFToken();
   }, []);
 
+  const resetCaptcha = useCallback(() => {
+    setCaptchaToken("");
+    setCaptchaError("");
+    setCaptchaResetCounter((prev) => prev + 1);
+  }, []);
+
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     sendGTMEvent({ event: "contactBtnClicked" });
+
+    if (!captchaToken) {
+      setCaptchaError("請完成 Cloudflare Turnstile 驗證");
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const formData = new FormData(e.target as HTMLFormElement);
@@ -51,7 +67,7 @@ export function ContactForm() {
           "Content-Type": "application/json",
           "X-CSRF-Token": csrfToken,
         },
-        body: JSON.stringify({ name, email, phone, message }),
+        body: JSON.stringify({ name, email, phone, message, turnstileToken: captchaToken }),
       });
 
       if (response.ok) {
@@ -61,6 +77,7 @@ export function ContactForm() {
     } catch (error) {
       console.error("Error submitting form:", error);
     } finally {
+      resetCaptcha();
       setIsSubmitting(false);
     }
   };
@@ -232,6 +249,21 @@ export function ContactForm() {
                         }
                       }}
                     />
+                    <div className="space-y-2">
+                      <TurnstileWidget
+                        onVerify={(token) => {
+                          setCaptchaToken(token);
+                          setCaptchaError("");
+                        }}
+                        onExpire={() => {
+                          setCaptchaToken("");
+                        }}
+                        resetSignal={captchaResetCounter}
+                      />
+                      {captchaError && (
+                        <p className="text-danger text-sm">{captchaError}</p>
+                      )}
+                    </div>
                     <Button
                       type="submit"
                       color="primary"
