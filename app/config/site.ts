@@ -244,6 +244,14 @@ type Project = {
 
 export const workProjects: Project[] = [
   {
+    name: "Cohomebuy",
+    description:
+      "CohomeBuy 是一個專為購屋家庭打造的居家合購平台，從裝修、空調到家具家電，整合同一社區的購買需求，以團購的方式爭取更優的價格與服務。",
+    image: ["/image/projects/cohomebuy.png"],
+    responsible: ["WordPress開發", "API串接", "SEO優化"],
+    link: "https://cohomebuy.com",
+  },
+  {
     name: "GoodShare",
     description:
       "《好享 GoodShare》是B2B2C的社群電商媒合平臺。目的就是打造一個網紅、品牌商、創作者以及消費者的共好生態圈。每年不定期舉辦O2O媒合活動，内容涵蓋文創美食、科技生活、時尚精品等商品，並提供合理的激勵獎金。",
@@ -265,7 +273,7 @@ export const workProjects: Project[] = [
       "成功開發故宮精品網路商城App，採用Flutter實現跨平台開發，並通過資安認證與無障礙檢測。透過生動的互動方式呈現故宮文物，提升用戶體驗，成功將故宮文物推向全球，並帶動了線上銷售額的成長。",
     image: ["/image/projects/npmshops.png"],
     responsible: ["Flutter開發", "WebView整合", "Apple Pay", "資安L3", "無障礙檢測"],
-    link: "https://www.npmshops.com",
+    link: "https://apps.apple.com/tw/app/national-palace-museum-shop/id6466132852?l=en-GB",
   },
   {
     name: "Slash123 App",
@@ -285,15 +293,15 @@ export const myProjects: Project[] = [
     description:
       "打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
     image: ["/image/projects/building.jpeg"],
-    responsible: ["iOS Swift", "App Clips", "Python FastAPI", "Next.JS", "TailwindCSS"],
+    responsible: ["SwiftUI", "App Clips", "FastAPI", "Next.JS"],
     link: "https://bookcourt.tw",
   },
   {
     name: "WebNotify",
     description:
       "WebNotify 是一款專為 iOS 設計的網頁變動通知應用程式。它能夠自動監控使用者指定的網頁，當網頁內容發生變化時，立即透過推播通知提醒使用者。這對於需要即時掌握資訊更新的用戶來說，是一個非常實用的工具。",
-    image: ["https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2c/fb/b3/2cfbb309-8586-c51e-7ce6-191050e461f7/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"],
-    responsible: ["iOS SwiftUI", "Safari Extension"],
+    image: ["https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3e/bb/bf/3ebbbfbc-3117-f751-4142-91c8cf18443a/Simulator_Screenshot_-_iPhone_17_Pro_Max_-_2025-09-10_at_13.03.11.png/460x998bb.webp"],
+    responsible: ["SwiftUI", "Background Fetch"],
     link: "https://apple.co/468G6eG",
   },
   {
@@ -301,7 +309,7 @@ export const myProjects: Project[] = [
     description:
       "",
     image: ["/image/projects/building.jpeg"],
-    responsible: ["iOS SwiftUI", "Safari Ex"],
+    responsible: ["SwiftUI", "Safari Extension"],
     link: "https://apps.apple.com/us/app/qrcoder-二維碼產生器/id6751326100",
   },
 ];

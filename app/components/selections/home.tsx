@@ -48,16 +48,6 @@ export const HomeSection = () => {
             >
               View My Apps
             </Button>
-            <Button
-              size="lg"
-              className="px-8 py-6 text-lg font-semibold"
-              as={Link}
-              href={myProfile.resume}
-              variant="bordered"
-              color="primary"
-            >
-              Download Resume
-            </Button>
           </div>
 
           {/* 社群連結 */}

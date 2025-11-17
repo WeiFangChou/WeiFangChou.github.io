@@ -40,22 +40,22 @@ export const TimelineCard = ({
     <div className="relative flex items-center">
       {/* Timeline line segments - extend beyond card to connect with adjacent cards */}
       {!isFirst && (
-        <div className="absolute left-8 md:left-1/2 transform -translate-x-0.5 md:-translate-x-1/2 w-0.5 -top-6 h-[calc(50%+1.5rem)] bg-gradient-to-b from-primary/50 to-primary"></div>
+        <div className="absolute left-8 md:left-1/2 transform -translate-x-0.5 md:-translate-x-1/2 w-0.5 -top-6 h-[calc(50%+1.5rem)] bg-gradient-to-b from-primary/50 to-primary hidden md:flex"></div>
       )}
       {!isLast && (
-        <div className="absolute left-8 md:left-1/2 transform -translate-x-0.5 md:-translate-x-1/2 w-0.5 -bottom-6 h-[calc(50%+1.5rem)] bg-gradient-to-b from-primary to-primary/50"></div>
+        <div className="absolute left-8 md:left-1/2 transform -translate-x-0.5 md:-translate-x-1/2 w-0.5 -bottom-6 h-[calc(50%+1.5rem)] bg-gradient-to-b from-primary to-primary/50  hidden md:flex"></div>
       )}
 
       {/* Timeline dot */}
-      <div className="absolute left-8 md:left-1/2 transform -translate-x-2 md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full shadow-lg shadow-primary/50 z-10">
+      <div className="absolute left-8 md:left-1/2 transform -translate-x-2 md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full shadow-lg shadow-primary/50 z-10  hidden md:flex">
         <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-50"></div>
       </div>
 
       {/* Card container */}
       <div
         className={`w-full md:w-1/2 ${
-          isEven ? "md:pr-20" : "md:pl-20 md:ml-auto"
-        } pl-16 pr-4 md:pl-0 md:pr-0`}
+          isEven ? "md:pr-20" : "pl-0 md:pl-20 md:ml-auto"
+        } pl-0 md:pl-0 pr-0 md:pr-0`}
       >
         <Card className="bg-content1/50 backdrop-blur-sm border border-divider hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
           <CardBody className="p-4 md:p-6">

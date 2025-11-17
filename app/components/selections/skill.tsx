@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Divider } from "@heroui/react";
+import { Card, CardBody, CardHeader } from "@heroui/react";
 import { mySkills, SubSkill, myProfile } from "../../config/site";
 
 export const SkillSection = () => {
@@ -17,18 +17,17 @@ export const SkillSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {mySkills.map((skillCategory) => (
             <Card
               key={skillCategory.typeName}
-              className="bg-content1/50 backdrop-blur-sm border hover:shadow-xl hover:shadow-primary/20 transition-all duration-300"
+              className="bg-content1/50 backdrop-blur-sm border border-divider hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 p-2"
             >
               <CardHeader className="pb-0">
                 <h3 className="text-2xl font-bold text-primary">
                   {skillCategory.typeName}
                 </h3>
               </CardHeader>
-              <Divider className="mt-2 h-[1px]" />
               <CardBody className="gap-6 pt-6">
                 {skillCategory.skills.map((skill) => (
                   <SkillCard key={skill.name} skill={skill} />

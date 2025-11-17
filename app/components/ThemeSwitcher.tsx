@@ -19,6 +19,7 @@ export function ThemeSwitcher() {
     <div>
       <Button
         isIconOnly
+        variant="light"
         onPress={() => setTheme(theme === "light" ? "dark" : "light")}
       >
         {theme === "light" ? <MoonIcon /> : <SunIcon />}

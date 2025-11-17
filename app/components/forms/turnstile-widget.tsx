@@ -1,99 +1,60 @@
-"use client";
-
-import Script from "next/script";
-import { useCallback, useEffect, useRef, useState } from "react";
-
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (
-        element: HTMLElement,
-        options: {
-          sitekey: string;
-          callback: (token: string) => void;
-          "expired-callback"?: () => void;
-          "error-callback"?: () => void;
-          theme?: "light" | "dark" | "auto";
-        }
-      ) => string;
-      reset?: (widgetId?: string) => void;
-      remove?: (widgetId?: string) => void;
-    };
-  }
-}
+import { Turnstile, TurnstileInstance } from "@marsidev/react-turnstile";
+import { useRef, useState } from "react";
 
 interface TurnstileWidgetProps {
   onVerify: (token: string) => void;
   onExpire: () => void;
-  resetSignal: number;
+  onError: () => void;
+  onSuccess: (token: string) => void; // 接 token
 }
 
-export function TurnstileWidget({ onVerify, onExpire, resetSignal }: TurnstileWidgetProps) {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const widgetIdRef = useRef<string | null>(null);
+export enum TurnstileStatus {
+  Idle = "idle",
+  Success = "success",
+  Error = "error",
+  Expired = "expired",
+}
+
+export function TurnstileWidget({
+  onVerify,
+  onExpire,
+  onError,
+  onSuccess,
+}: TurnstileWidgetProps) {
+  const [, setStatus] = useState<TurnstileStatus>(TurnstileStatus.Idle);
+
   const siteKey = process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY;
-
-  const renderWidget = useCallback(() => {
-    if (!scriptLoaded || !siteKey || !containerRef.current || widgetIdRef.current) {
-      return;
-    }
-
-    if (!window.turnstile) {
-      return;
-    }
-
-    widgetIdRef.current = window.turnstile.render(containerRef.current, {
-      sitekey: siteKey,
-      theme: "auto",
-      callback: (token: string) => {
-        onVerify(token);
-      },
-      "expired-callback": () => {
-        onExpire();
-      },
-      "error-callback": () => {
-        onExpire();
-      },
-    });
-  }, [scriptLoaded, siteKey, onVerify, onExpire]);
-
-  useEffect(() => {
-    renderWidget();
-  }, [renderWidget]);
-
-  useEffect(() => {
-    if (!widgetIdRef.current || !window.turnstile || typeof window.turnstile.reset !== "function") {
-      return;
-    }
-    window.turnstile.reset(widgetIdRef.current);
-  }, [resetSignal]);
-
-  useEffect(() => {
-    return () => {
-      if (widgetIdRef.current && window.turnstile && typeof window.turnstile.remove === "function") {
-        window.turnstile.remove(widgetIdRef.current);
-      }
-    };
-  }, []);
+  const ref = useRef<TurnstileInstance | undefined>(undefined);
 
   if (!siteKey) {
     return (
       <p className="text-danger text-sm">
-        尚未設定 Cloudflare Turnstile site key。
+        ⚠️ 尚未設定 Cloudflare Turnstile site key。
       </p>
     );
   }
 
   return (
-    <>
-      <Script
-        id="cloudflare-turnstile"
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
-        strategy="afterInteractive"
-        onReady={() => setScriptLoaded(true)}
-      />
-      <div ref={containerRef} className="flex justify-center" />
-    </>
+    <Turnstile
+      ref={ref}
+      siteKey={siteKey}
+      onError={() => {
+        setStatus(TurnstileStatus.Error);
+        onError();
+      }}
+      onExpire={() => {
+        setStatus(TurnstileStatus.Expired);
+        onExpire();
+      }}
+      onSuccess={(token) => {
+        setStatus(TurnstileStatus.Success);
+        onSuccess(token);
+        onVerify(token);
+      }}
+      options={{
+        action: "submit-form",
+        size: "flexible",
+      }}
+    />
   );
 }

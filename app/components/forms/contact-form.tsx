@@ -19,9 +19,8 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [csrfToken, setCsrfToken] = useState<string>("");
-  const [captchaToken, setCaptchaToken] = useState<string>("");
+  const [captchaToken, setCaptchaToken] = useState<string | null>("");
   const [captchaError, setCaptchaError] = useState<string>("");
-  const [captchaResetCounter, setCaptchaResetCounter] = useState(0);
 
   useEffect(() => {
     // Fetch CSRF token when component mounts
@@ -40,7 +39,6 @@ export function ContactForm() {
   const resetCaptcha = useCallback(() => {
     setCaptchaToken("");
     setCaptchaError("");
-    setCaptchaResetCounter((prev) => prev + 1);
   }, []);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -67,7 +65,13 @@ export function ContactForm() {
           "Content-Type": "application/json",
           "X-CSRF-Token": csrfToken,
         },
-        body: JSON.stringify({ name, email, phone, message, turnstileToken: captchaToken }),
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message,
+          turnstileToken: captchaToken,
+        }),
       });
 
       if (response.ok) {
@@ -249,16 +253,21 @@ export function ContactForm() {
                         }
                       }}
                     />
-                    <div className="space-y-2">
+                    <div className="space-y-2 w-full">
                       <TurnstileWidget
-                        onVerify={(token) => {
+                        onVerify={() => {}}
+                        onSuccess={(token) => {
                           setCaptchaToken(token);
                           setCaptchaError("");
                         }}
                         onExpire={() => {
-                          setCaptchaToken("");
+                          setCaptchaToken(null);
+                          setCaptchaError("驗證已過期，請重新勾選");
                         }}
-                        resetSignal={captchaResetCounter}
+                        onError={() => {
+                          setCaptchaToken(null);
+                          setCaptchaError("驗證錯誤，請重新嘗試");
+                        }}
                       />
                       {captchaError && (
                         <p className="text-danger text-sm">{captchaError}</p>
