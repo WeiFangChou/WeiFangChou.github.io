@@ -89,7 +89,7 @@ export function ContactForm() {
   return (
     <section
       id="contact"
-      className="py-20 lg:py-32 bg-gradient-to-b from-background/50 to-background"
+      className="py-20 lg:py-32 bg-linear-to-b from-background/50 to-background"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <div className="max-w-4xl mx-auto">

@@ -6,7 +6,7 @@ export const WorkProjectSection = () => {
   return (
     <section
       id="project"
-      className="py-20 lg:py-32 bg-gradient-to-b from-background to-background/50"
+      className="py-20 lg:py-32 bg-linear-to-b from-background to-background/50"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -30,7 +30,7 @@ export const WorkProjectSection = () => {
                     loading="eager"
                     radius="none"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">

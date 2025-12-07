@@ -5,7 +5,7 @@ export const SkillSection = () => {
   return (
     <section
       id="skill"
-      className="py-20 lg:py-32 bg-gradient-to-b from-background/50 to-background"
+      className="py-20 lg:py-32 bg-linear-to-b from-background/50 to-background"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -74,7 +74,7 @@ export const SkillCard = ({ skill }: { skill: SubSkill }) => {
   return (
     <div className="group">
       <div className="flex items-center gap-4 mb-3">
-        <div className="flex-shrink-0 w-12 h-12 items-center justify-center bg-primary/10 rounded-lg p-1.5 group-hover:bg-primary/20 transition-colors">
+        <div className="shrink-0 w-12 h-12 items-center justify-center bg-primary/10 rounded-lg p-1.5 group-hover:bg-primary/20 transition-colors">
           {skill.icon({ height: 36, width: 36 })}
         </div>
         <p className="font-semibold text-base">{skill.name}</p>
@@ -90,7 +90,7 @@ export const SkillCard = ({ skill }: { skill: SubSkill }) => {
             className="max-w-full"
             classNames={{
               track: "bg-default/20",
-              indicator: "bg-gradient-to-r from-primary to-purple-600",
+              indicator: "bg-linear-to-r from-primary to-purple-600",
             }}
           />
         </div> */}

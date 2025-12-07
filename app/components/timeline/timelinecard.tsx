@@ -40,10 +40,10 @@ export const TimelineCard = ({
     <div className="relative flex items-center">
       {/* Timeline line segments - extend beyond card to connect with adjacent cards */}
       {!isFirst && (
-        <div className="absolute left-8 md:left-1/2 transform -translate-x-0.5 md:-translate-x-1/2 w-0.5 -top-6 h-[calc(50%+1.5rem)] bg-gradient-to-b from-primary/50 to-primary hidden md:flex"></div>
+        <div className="absolute left-8 md:left-1/2 transform -translate-x-0.5 md:-translate-x-1/2 w-0.5 -top-6 h-[calc(50%+1.5rem)] bg-linear-to-b from-primary/50 to-primary hidden md:flex"></div>
       )}
       {!isLast && (
-        <div className="absolute left-8 md:left-1/2 transform -translate-x-0.5 md:-translate-x-1/2 w-0.5 -bottom-6 h-[calc(50%+1.5rem)] bg-gradient-to-b from-primary to-primary/50  hidden md:flex"></div>
+        <div className="absolute left-8 md:left-1/2 transform -translate-x-0.5 md:-translate-x-1/2 w-0.5 -bottom-6 h-[calc(50%+1.5rem)] bg-linear-to-b from-primary to-primary/50  hidden md:flex"></div>
       )}
 
       {/* Timeline dot */}
@@ -69,7 +69,7 @@ export const TimelineCard = ({
             {/* Content */}
             <div className="flex items-start gap-4">
               {experience.icon && (
-                <div className="flex-shrink-0 w-16 h-16 bg-white rounded-xl p-2 shadow-md flex justify-center items-center">
+                <div className="shrink-0 w-16 h-16 bg-white rounded-xl p-2 shadow-md flex justify-center items-center">
                   <Image
                     src={experience.icon}
                     alt={`${experience.company} logo`}

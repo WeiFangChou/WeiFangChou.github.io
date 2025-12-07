@@ -30,7 +30,7 @@ export default function PrivacyPage({ params }: { params: Promise<{ appname: str
   // Special handling for webnotify app with dual language support
   if (appname === "webnotify") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-purple-800 p-4">
+      <div className="min-h-screen bg-linear-to-br from-purple-950 via-purple-900 to-purple-800 p-4">
         <div className="max-w-4xl mx-auto pt-20 pb-10">
           <Card className="bg-purple-950/50 backdrop-blur-sm border border-purple-800">
             <CardHeader className="flex flex-col gap-2 px-6 pt-6">
@@ -263,7 +263,7 @@ export default function PrivacyPage({ params }: { params: Promise<{ appname: str
 
   // Default English privacy policy for other apps
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-purple-800 p-4">
+    <div className="min-h-screen bg-linear-to-br from-purple-950 via-purple-900 to-purple-800 p-4">
       <div className="max-w-4xl mx-auto pt-20 pb-10">
         <Card className="bg-purple-950/50 backdrop-blur-sm border border-purple-800">
           <CardHeader className="flex flex-col gap-2 px-6 pt-6">
