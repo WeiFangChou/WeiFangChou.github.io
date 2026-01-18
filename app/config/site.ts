@@ -348,5 +348,16 @@ export const myApps: Record<string, AppInfo> = {
       dataUsage: ["Generating QR codes", "Improving app performance", "Providing QR code history feature"],
       contactEmail: "app@fangs.dev"
     }
+  },
+  piano: {
+    id: "piano",
+    name: "木根樂器",
+    appStoreLink: "#",
+    privacyTitle: "Privacy Policy",
+    privacyContent: {
+      informationCollected: [],
+      dataUsage: [],
+      contactEmail: "fang@fangs.dev"
+    }
   }
 };
