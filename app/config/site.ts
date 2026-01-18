@@ -319,6 +319,7 @@ export type AppInfo = {
   id: string;
   name: string;
   appStoreLink: string;
+  playStoreLink?: string;
   privacyTitle?: string;
   privacyContent?: {
     informationCollected?: string[];
