@@ -149,6 +149,9 @@ export default function PrivacyPage({ params }: { params: Promise<{ appname: str
                       <p>Email: <Link href={`mailto:${app.privacyContent?.contactEmail}`} className="text-purple-400 hover:text-purple-300">{app.privacyContent?.contactEmail}</Link></p>
                       <p>Website: <Link href="https://fangs.dev" className="text-purple-400 hover:text-purple-300">https://fangs.dev</Link></p>
                       <p>App Store: <Link href={app.appStoreLink} className="text-purple-400 hover:text-purple-300">App Store 連結</Link></p>
+                      {app.playStoreLink && (
+                        <p>Play Store: <Link href={app.playStoreLink} className="text-purple-400 hover:text-purple-300">Play Store 連結</Link></p>
+                      )}
                     </div>
                   </section>
                 </>
@@ -233,6 +236,9 @@ export default function PrivacyPage({ params }: { params: Promise<{ appname: str
                       <p>Email: <Link href={`mailto:${app.privacyContent?.contactEmail}`} className="text-purple-400 hover:text-purple-300">{app.privacyContent?.contactEmail}</Link></p>
                       <p>Website: <Link href="https://fangs.dev" className="text-purple-400 hover:text-purple-300">https://fangs.dev</Link></p>
                       <p>App Store: <Link href={app.appStoreLink} className="text-purple-400 hover:text-purple-300">View on App Store</Link></p>
+                      {app.playStoreLink && (
+                        <p>Play Store: <Link href={app.playStoreLink} className="text-purple-400 hover:text-purple-300">View on Play Store</Link></p>
+                      )}
                     </div>
                   </section>
                 </>
@@ -360,13 +366,16 @@ export default function PrivacyPage({ params }: { params: Promise<{ appname: str
                 <p>Email: {app.privacyContent?.contactEmail || "app@fangs.dev"}</p>
                 <p>Website: <Link href="https://fangs.dev" className="text-purple-400 hover:text-purple-300">https://fangs.dev</Link></p>
                 <p>App Store: <Link href={app.appStoreLink} className="text-purple-400 hover:text-purple-300">View on App Store</Link></p>
+                {app.playStoreLink && (
+                  <p>Play Store: <Link href={app.playStoreLink} className="text-purple-400 hover:text-purple-300">View on Play Store</Link></p>
+                )}
               </div>
             </section>
 
             <Divider className="bg-purple-800 my-6" />
-            
+
             <div className="text-center space-y-2">
-              <Link 
+              <Link
                 href={`/${appname}`}
                 className="text-purple-400 hover:text-purple-300 font-medium block"
               >
