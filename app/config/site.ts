@@ -59,6 +59,7 @@ export const myProfile = {
   experienceDescription: "我對新技術充滿好奇，目前正在深入研究學習Next.JS 和TailWind CSS，以提升前端開發能力。同時也持續學習App開發技能，並積極開發更完整的專案。",
   projectDescription: "曾參與故宮精品與亞路科技的App開發，具備豐富的電商與社群平台開發經驗，能針對不同產業需求，提供客製化的解決方案，並提升產品的用戶體驗與商業價值。",
   appStoreLink: "https://apple.co/45Rfb5r",
+  playStoreLink: "https://play.google.com/store/apps/developer?id=WeiFang",
   socialLinks: [
     {
       label: "GitHub",
@@ -346,6 +347,17 @@ export const myApps: Record<string, AppInfo> = {
     privacyContent: {
       informationCollected: [],
       dataUsage: ["Generating QR codes", "Improving app performance", "Providing QR code history feature"],
+      contactEmail: "app@fangs.dev"
+    }
+  },
+  piano: {
+    id: "piano",
+    name: "木根樂器",
+    appStoreLink: "https://apps.apple.com/tw/app/%E6%9C%A8%E6%A0%B9%E6%A8%82%E5%99%A8/id6756510770?l=en-GB",
+    privacyTitle: "Piano Privacy Policy",
+    privacyContent: {
+      informationCollected: [],
+      dataUsage: ["Scan QRCodes", "Bluetooth"],
       contactEmail: "app@fangs.dev"
     }
   }
