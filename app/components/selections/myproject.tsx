@@ -1,6 +1,21 @@
-import { Card, CardBody, Chip, Image, Button, Link } from "@heroui/react";
+import { Card, CardBody, Chip, Image, Link, Button } from "@heroui/react";
+import NextImage from "next/image";
 import { myProjects } from "../../config/site";
 import { ExternalLinkIcon } from "../imgs/icons";
+
+const getLinkBadge = (url: string) => {
+  if (url.includes("apple.com") || url.includes("apple.co")) {
+    return { src: "/image/appstore-badge.svg", alt: "Download on App Store" };
+  }
+  if (url.includes("play.google.com")) {
+    return { src: "/image/googleplay-badge.svg", alt: "Get it on Google Play" };
+  }
+  return null;
+};
+
+const getWebsiteLink = (links: string[]) => {
+  return links.find((link) => !getLinkBadge(link));
+};
 
 export const MyProjectSection = () => {
   return (
@@ -38,25 +53,27 @@ export const MyProjectSection = () => {
                     <h3 className="text-xl md:text-2xl font-bold">
                       {project.name}
                     </h3>
-                    <Button
-                      isIconOnly
-                      color="primary"
-                      size="sm"
-                      variant="light"
-                      as={Link}
-                      href={project.link}
-                      isExternal
-                      className="hover:bg-primary/20"
-                    >
-                      <ExternalLinkIcon />
-                    </Button>
+                    {getWebsiteLink(project.links) && (
+                      <Button
+                        isIconOnly
+                        color="primary"
+                        size="sm"
+                        variant="light"
+                        as={Link}
+                        href={getWebsiteLink(project.links)}
+                        isExternal
+                        className="hover:bg-primary/20"
+                      >
+                        <ExternalLinkIcon />
+                      </Button>
+                    )}
                   </div>
 
                   <p className="text-foreground-700 mb-6 leading-relaxed flex-1">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.responsible.map((tech) => (
                       <Chip
                         key={tech}
@@ -67,6 +84,30 @@ export const MyProjectSection = () => {
                         {tech}
                       </Chip>
                     ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {project.links.map((link, index) => {
+                      const badge = getLinkBadge(link);
+                      if (badge) {
+                        return (
+                          <Link
+                            key={index}
+                            href={link}
+                            isExternal
+                            className="hover:opacity-80 transition-opacity"
+                          >
+                            <NextImage
+                              src={badge.src}
+                              alt={badge.alt}
+                              width={120}
+                              height={40}
+                            />
+                          </Link>
+                        );
+                      }
+                      return null;
+                    })}
                   </div>
                 </div>
               </CardBody>

@@ -65,9 +65,9 @@ You can stop all collection of information by the Application easily by uninstal
 
 ## Data Retention Policy / 資料保留政策
 
-The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at fang@fangs.dev and they will respond in a reasonable time.
+The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at app@fangs.dev and they will respond in a reasonable time.
 
-服務提供者將在您使用應用程式期間，並持續合理時間內保留用戶提供的資料。如果您希望他們刪除您透過應用程式提供的用戶提供資料，請聯繫 fang@fangs.dev，他們會在合理時間內回覆。
+服務提供者將在您使用應用程式期間，並持續合理時間內保留用戶提供的資料。如果您希望他們刪除您透過應用程式提供的用戶提供資料，請聯繫 app@fangs.dev，他們會在合理時間內回覆。
 
 ---
 
@@ -77,9 +77,9 @@ The Service Provider does not use the Application to knowingly solicit data from
 
 服務提供者不會利用應用程式故意索取資料或行銷給 13 歲以下兒童。
 
-The Service Provider does not knowingly collect personally identifiable information from children. The Service Provider encourages all children to never submit any personally identifiable information through the Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application and/or Services, please contact the Service Provider (fang@fangs.dev) so that they will be able to take the necessary actions. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).
+The Service Provider does not knowingly collect personally identifiable information from children. The Service Provider encourages all children to never submit any personally identifiable information through the Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application and/or Services, please contact the Service Provider (app@fangs.dev) so that they will be able to take the necessary actions. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).
 
-服務提供者不會故意收集兒童的個人識別資訊。服務提供者鼓勵所有兒童切勿透過應用程式及/或服務提交任何個人識別資訊。服務提供者鼓勵家長及法定監護人監控子女的網路使用情況，並協助執行此政策，指示子女未經同意不得透過應用程式及/或服務提供個人身份資訊。如果您有理由相信兒童透過應用程式及/或服務向服務提供者提供個人識別資訊，請聯絡服務提供者（fang@fangs.dev），以便他們能採取必要行動。您也必須年滿 16 歲，才能同意您所在國家處理您的個人識別資訊（在某些國家，我們可能允許您的父母或監護人代為處理）。
+服務提供者不會故意收集兒童的個人識別資訊。服務提供者鼓勵所有兒童切勿透過應用程式及/或服務提交任何個人識別資訊。服務提供者鼓勵家長及法定監護人監控子女的網路使用情況，並協助執行此政策，指示子女未經同意不得透過應用程式及/或服務提供個人身份資訊。如果您有理由相信兒童透過應用程式及/或服務向服務提供者提供個人識別資訊，請聯絡服務提供者（app@fangs.dev），以便他們能採取必要行動。您也必須年滿 16 歲，才能同意您所在國家處理您的個人識別資訊（在某些國家，我們可能允許您的父母或監護人代為處理）。
 
 ---
 
@@ -113,6 +113,6 @@ By using the Application, you are consenting to the processing of your informati
 
 ## Contact Us / 聯絡我們
 
-If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at fang@fangs.dev.
+If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at app@fangs.dev.
 
-若您對使用應用程式時的隱私有任何疑問，或對實務有疑問，請透過電子郵件聯絡服務提供者：fang@fangs.dev
+若您對使用應用程式時的隱私有任何疑問，或對實務有疑問，請透過電子郵件聯絡服務提供者：app@fangs.dev

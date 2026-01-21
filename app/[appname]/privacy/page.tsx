@@ -59,7 +59,7 @@ export default function PrivacyPage({
 
   if (error || !content) {
     return (
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-background text-foreground p-4">
         <div className="max-w-3xl mx-auto px-4 py-12">
           <h1 className="text-3xl font-bold mb-4">Privacy Policy Not Found</h1>
           <p className="text-foreground/70 mb-8">
@@ -79,7 +79,7 @@ export default function PrivacyPage({
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground p-4">
       <div className="max-w-3xl mx-auto px-4 py-12">
         <PrivacyContent content={content} />
 

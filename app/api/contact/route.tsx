@@ -1,21 +1,9 @@
 import { NextResponse } from "next/server";
 import { telegramNotify } from "../../components/forms/telegram";
-import { validateCSRFToken } from "../../lib/csrf";
 import { verifyTurnstileToken } from "../../lib/turnstile";
 
 export async function POST(request: Request) {
   try {
-    // Validate CSRF token
-    const csrfToken = request.headers.get('X-CSRF-Token');
-    if (!csrfToken) {
-      return NextResponse.json({ result: false, error: 'CSRF token missing' }, { status: 403 });
-    }
-
-    const isValidToken = await validateCSRFToken(csrfToken);
-    if (!isValidToken) {
-      return NextResponse.json({ result: false, error: 'Invalid CSRF token' }, { status: 403 });
-    }
-
     const json = await request.json();
     const name = json.name;
     const email = json.email;
