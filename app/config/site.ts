@@ -245,6 +245,14 @@ type Project = {
 
 export const workProjects: Project[] = [
   {
+    name: "木根樂器",
+    description:
+      "木根樂器是一款透過藍牙連接電子鋼琴的應用程式，讓使用者輕鬆控制、練習與管理琴音，提升彈奏體驗。",
+    image: ["/image/projects/pianocontrol.png"],
+    responsible: ["iOS", "Android", "藍芽"],
+    link: "https://apple.co/49xqNOn",
+  },
+  {
     name: "Cohomebuy",
     description:
       "CohomeBuy 是一個專為購屋家庭打造的居家合購平台，從裝修、空調到家具家電，整合同一社區的購買需求，以團購的方式爭取更優的價格與服務。",
