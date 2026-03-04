@@ -83,5 +83,5 @@ If you have any questions about this Privacy Policy, please contact us:
 
 如對隱私權政策有任何疑問，請聯絡我們：
 
-- **Email:** [app@fangs.dev](mailto:app@fangs.dev)
-- **Website:** [https://fangs.dev](https://fangs.dev)
+- **Email:** [app@fangs.tw](mailto:app@fangs.tw)
+- **Website:** [https://fangs.tw](https://fangs.tw)

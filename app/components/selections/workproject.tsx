@@ -5,10 +5,10 @@ import { ExternalLinkIcon } from "../imgs/icons";
 
 const getLinkBadge = (url: string) => {
   if (url.includes("apple.com") || url.includes("apple.co")) {
-    return { src: "/image/appstore-badge.svg", alt: "Download on App Store" };
+    return { src: "/image/appstore-badge-en.svg", alt: "Download on App Store" };
   }
   if (url.includes("play.google.com")) {
-    return { src: "/image/googleplay-badge.svg", alt: "Get it on Google Play" };
+    return { src: "/image/googleplay-badge-en.svg", alt: "Get it on Google Play" };
   }
   return null;
 };
@@ -39,7 +39,7 @@ export const WorkProjectSection = () => {
               <CardBody className="flex flex-col p-0 overflow-hidden">
                 <div className="relative overflow-hidden aspect-video">
                   <Image
-                    alt={project.name}
+                    alt={`${project.name} App Preview`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     src={project.image[0]}
                     loading="eager"

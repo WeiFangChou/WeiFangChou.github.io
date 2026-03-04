@@ -8,8 +8,12 @@ import { ScrollToTop } from "./components/scroll-to-top";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fangs.tw"),
   title: siteConfig.name,
   description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -34,6 +38,20 @@ export const metadata: Metadata = {
     "App",
   ],
   creator: "WeiFang Chou",
+  openGraph: {
+    type: "website",
+    locale: "zh-TW",
+    url: "https://fangs.tw",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "https://fangs.tw/avatar-origin.png",
+        alt: siteConfig.name,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

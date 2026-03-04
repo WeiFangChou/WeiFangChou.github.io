@@ -37,17 +37,14 @@ export const HomeSection = () => {
             >
               Contact Me
             </Button>
-            <Button
-              size="lg"
-              className="px-8 py-6 text-lg font-semibold"
-              as={Link}
-              href={myProfile.appStoreLink}
-              variant="bordered"
-              color="primary"
-              isExternal
-            >
-              View My Apps
-            </Button>
+            <div className="flex gap-4">
+              <Image src={'image/appstore-badge-en.svg'} onClick={() => {
+                window.open(myProfile.appStoreLink, '_blank');
+              }} alt="Download on the App Store" width={150} height={50} className="cursor-pointer h-12" />
+              <Image src={'image/googleplay-badge-en.svg'} onClick={() => {
+                window.open(myProfile.playStoreLink, '_blank');
+              }} alt="Get it on Google Play" width={150} height={50} className="cursor-pointer h-12" />
+            </div>
           </div>
 
           {/* 社群連結 */}
@@ -80,7 +77,7 @@ export const HomeSection = () => {
             <div className="p-2 sm:p-2 md:p-12">
               <Image
                 src={myProfile.avatar}
-                alt="avatar"
+                alt="WeiFang Chou - iOS Developer"
                 width={500}
                 height={500}
                 className="md:rounded-lg  object-fill max-h-[70vw] md:max-h-[500px] w-auto"

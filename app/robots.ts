@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://fangs.dev/sitemap.xml',
+    sitemap: 'https://fangs.tw/sitemap.xml',
   }
 }

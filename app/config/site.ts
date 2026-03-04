@@ -59,11 +59,11 @@ export const myProfile = {
   experienceDescription: "我對新技術充滿好奇，目前正在深入研究學習Next.JS 和TailWind CSS，以提升前端開發能力。同時也持續學習App開發技能，並積極開發更完整的專案。",
   projectDescription: "曾參與故宮精品與亞路科技的App開發，具備豐富的電商與社群平台開發經驗，能針對不同產業需求，提供客製化的解決方案，並提升產品的用戶體驗與商業價值。",
   appStoreLink: "https://apple.co/45Rfb5r",
-  playStoreLink: "https://play.google.com/store/apps/developer?id=WeiFang",
+  playStoreLink: "https://play.google.com/store/apps/developer?id=WeiFangChou",
   socialLinks: [
     {
       label: "GitHub",
-      href: "https://github.com/WeiFangChou?ref=fangs.dev",
+      href: "https://github.com/WeiFangChou?ref=fangs.tw",
       icon: GithubIcon,
     },
     {
@@ -110,7 +110,7 @@ export const myExperience: Experience[] = [
     location: "台北市信義區",
     icon: '/image/experiences/nityo.jpg',
     description:
-      "於Nityo在國泰銀行擔任駐點iOS工程師，參與官方行動銀行 App 的首頁改版與功能修改，負責 iOS UI調整及與後端 API 的串接，確保功能穩定且使用者體驗提升。",
+      "於Nityo在國內大型金控擔任駐點iOS工程師，參與官方行動銀行 App 的首頁改版與功能修改，負責 iOS UI調整及與後端 API 的串接，確保功能穩定且使用者體驗提升。",
   },
   {
     startDate: "2023.03",
@@ -269,14 +269,6 @@ export const workProjects: Project[] = [
     links: ["https://goodshare.shop"],
   },
   {
-    name: "Cube App",
-    description:
-      "於Nityo在國泰銀行擔任駐點iOS工程師，參與官方行動銀行 App 的首頁改版與功能優化，負責 iOS 介面優化及與後端 API 的串接，確保功能穩定且使用者體驗提升。",
-    image: ["/image/projects/cubeapp.jpeg"],
-    responsible: ["iOS 開發", "Swift", 'Objective-C', "API串接"],
-    links: ["https://apple.co/3Gsy1Yg"],
-  },
-  {
     name: "故宮精品網路商城 App",
     description:
       "成功開發故宮精品網路商城App，採用Flutter實現跨平台開發，並通過資安認證與無障礙檢測。透過生動的互動方式呈現故宮文物，提升用戶體驗，成功將故宮文物推向全球，並帶動了線上銷售額的成長。",
@@ -344,7 +336,7 @@ export const myApps: Record<string, AppInfo> = {
     privacyContent: {
       informationCollected: [],
       dataUsage: [],
-      contactEmail: "app@fangs.dev"
+      contactEmail: "app@fangs.tw"
     }
   },
   qrcoder: {
@@ -355,7 +347,7 @@ export const myApps: Record<string, AppInfo> = {
     privacyContent: {
       informationCollected: [],
       dataUsage: ["Generating QR codes", "Improving app performance", "Providing QR code history feature"],
-      contactEmail: "app@fangs.dev"
+      contactEmail: "app@fangs.tw"
     }
   },
   piano: {
@@ -366,7 +358,7 @@ export const myApps: Record<string, AppInfo> = {
     privacyContent: {
       informationCollected: [],
       dataUsage: ["iOS", "Android", "Bluetooth"],
-      contactEmail: "app@fangs.dev"
+      contactEmail: "app@fangs.tw"
     }
   }
 };

@@ -83,6 +83,6 @@ If you have any questions about this Privacy Policy, please contact us:
 
 如對隱私權政策有任何疑問，請聯絡我們：
 
-- **Email:** [app@fangs.dev](mailto:app@fangs.dev)
-- **Website:** [https://fangs.dev](https://fangs.dev)
+- **Email:** [app@fangs.tw](mailto:app@fangs.tw)
+- **Website:** [https://fangs.tw](https://fangs.tw)
 - **App Store:** [View on App Store](https://apps.apple.com/us/app/qrcoder-二維碼產生器/id6751326100)
