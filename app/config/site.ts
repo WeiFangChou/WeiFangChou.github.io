@@ -253,6 +253,14 @@ export const workProjects: Project[] = [
     links: ["https://apple.co/49xqNOn", "https://play.google.com/store/apps/details?id=com.weifang.pianocontrol"],
   },
   {
+    name: "川大電梯",
+    description:
+      "川大機電為深耕桃園三十年的專業電梯維保品牌。此官網以直覺設計整合了 24 小時維修方案與線上報修表單，協助客戶快速取得技術支援，為傳統產業成功建立安全、可靠的數位形象。",
+    image: ["/image/projects/chuan-dah.png"],
+    responsible: ["WordPress開發", "API串接", "SEO優化"],
+    links: ["https://chuandah.com"],
+  },
+  {
     name: "Cohomebuy",
     description:
       "CohomeBuy 是一個專為購屋家庭打造的居家合購平台，從裝修、空調到家具家電，整合同一社區的購買需求，以團購的方式爭取更優的價格與服務。",
@@ -261,11 +269,27 @@ export const workProjects: Project[] = [
     links: ["https://cohomebuy.com"],
   },
   {
+    name: "BTC-TW",
+    description:
+      "btc-tw.com 是專為台灣用戶打造的加密貨幣資訊整合平台。網站匯集了最新的虛擬貨幣情報、區塊鏈知識與各大交易所專屬優惠。透過清晰的動線規劃與直覺的介面設計，協助使用者快速掌握幣圈動態，是投資者的高效資源樞紐。",
+    image: ["/image/projects/btc-tw.png"],
+    responsible: ["WordPress開發", "API串接", "SEO優化"],
+    links: ["https://btc-tw.com"],
+  },
+  {
+    name: "Fooder",
+    description:
+      "Fooder 是專注於台灣在地情報的美食評鑑平台。網站集結了豐富的餐廳開箱、美食地圖與真實評價，透過流暢的動線與清晰分類，幫助使用者輕鬆探索聚餐靈感，是高互動性的數位美食指南。",
+    image: ["/image/projects/fooder.png"],
+    responsible: ["WordPress開發", "API串接", "SEO優化"],
+    links: ["https://foodertw.com"],
+  },
+  {
     name: "GoodShare",
     description:
       "《好享 GoodShare》是B2B2C的社群電商媒合平臺。目的就是打造一個網紅、品牌商、創作者以及消費者的共好生態圈。每年不定期舉辦O2O媒合活動，内容涵蓋文創美食、科技生活、時尚精品等商品，並提供合理的激勵獎金。",
     image: ["/image/projects/goodshare.png"],
-    responsible: ["WordPress開發", 'WooCommerce', "API串接", "SEO優化"],
+    responsible: ["WordPress開發", 'WooCommerce', "API串接", "金流（綠界）串接", "SEO優化"],
     links: ["https://goodshare.shop"],
   },
   {
@@ -294,7 +318,7 @@ export const myProjects: Project[] = [
       "打造了一個創新的線上平台，連接運動場地與使用者。平台不僅提供場地預約服務，更整合了零打運動課程，滿足使用者多元化的運動需求。透過大數據分析，我們能更精準地掌握市場趨勢，為商家提供更有效的行銷策略。",
     image: ["/image/projects/building.jpeg"],
     responsible: ["SwiftUI", "App Clips", "FastAPI", "Next.JS"],
-    links: ["https://bookcourt.tw", "https://apps.apple.com/us/app/bookcourt/id6736594027", "https://play.google.com/store/apps/details?id=com.weifang.bookcourt"],
+    links: ["https://bookcourt.tw", "https://apps.apple.com/us/app/bookcourt/id6736594027", "https://testflight.apple.com/join/Yd6FuT3k", "https://play.google.com/store/apps/details?id=com.weifang.bookcourt"],
   },
   {
     name: "WebNotify",

@@ -4,6 +4,9 @@ import { workProjects } from "../../config/site";
 import { ExternalLinkIcon } from "../imgs/icons";
 
 const getLinkBadge = (url: string) => {
+  if (url.includes("testflight.apple.com")) {
+    return { src: "/image/testflight-badge.png", alt: "Download on TestFlight" };
+  }
   if (url.includes("apple.com") || url.includes("apple.co")) {
     return { src: "/image/appstore-badge-en.svg", alt: "Download on App Store" };
   }
