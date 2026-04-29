@@ -384,5 +384,16 @@ export const myApps: Record<string, AppInfo> = {
       dataUsage: ["iOS", "Android", "Bluetooth"],
       contactEmail: "app@fangs.tw"
     }
+  },
+  quotify: {
+    id: "quotify",
+    name: "Quotify",
+    appStoreLink: "https://apps.apple.com/us/app/quotify-專業報價單/id6764370347",
+    privacyTitle: "Quotify Privacy Policy",
+    privacyContent: {
+      informationCollected: ["Subscription purchase records", "Onboarding survey data", "CloudKit synced data"],
+      dataUsage: ["Subscription management via RevenueCat", "App personalization", "Cloud data synchronization"],
+      contactEmail: "app@fangs.tw"
+    }
   }
 };
